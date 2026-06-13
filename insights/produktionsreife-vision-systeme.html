@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wann ist ein Vision-System produktionsreif? | RobuTrace</title>
+    <meta
+      name="description"
+      content="Warum gute Laborergebnisse noch keine Produktionsreife beweisen und welche fünf Validierungslücken industrielle Vision-Teams schließen sollten."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://robutrace.de/insights/produktionsreife-vision-systeme.html" />
+    <link rel="icon" href="../assets/robutrace-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="../"><img src="../assets/robutrace-logo.png?v=20260612" alt="RobuTrace" /></a>
+        <a class="button button-small" href="../#kontakt">Pilotprojekt besprechen</a>
+      </div>
+    </header>
+    <main class="article-page">
+      <article>
+        <header class="article-header container">
+          <div class="breadcrumb"><a href="../">Start</a><span>/</span><a href="./">Insights</a></div>
+          <p class="eyebrow">Validierung</p>
+          <h1>Warum gute Laborergebnisse noch keine Produktionsreife beweisen</h1>
+          <p class="article-deck">
+            Ein Vision-System kann im Entwicklungsdatensatz glänzen und an der Linie trotzdem
+            instabil werden. Entscheidend ist nicht nur, wie gut es unter Idealbedingungen
+            arbeitet, sondern wie berechenbar es auf reale Abweichungen reagiert.
+          </p>
+          <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-06-12">12. Juni 2026</time></div>
+        </header>
+        <div class="article-cover container"><span>Lab ≠ Line</span></div>
+        <div class="article-content container">
+          <p>
+            In der Entwicklung ist die Welt kontrollierbar: Beleuchtung, Bauteillage,
+            Kameraposition und Datenqualität sind weitgehend bekannt. In der Produktion wirken
+            dagegen viele kleine Abweichungen gleichzeitig. Genau dort entscheidet sich, ob ein
+            System nur demonstrierbar oder wirklich produktionsreif ist.
+          </p>
+          <h2>1. Der Datensatz bildet die Linie nicht vollständig ab</h2>
+          <p>
+            Ein guter Testdatensatz ist notwendig, aber selten vollständig. Neue Chargen,
+            Oberflächen, Verschmutzungen, Reflexionen oder bislang unbekannte Fehlerbilder können
+            die Verteilung verändern. Die zentrale Frage lautet deshalb nicht nur: Wie gut ist das
+            Modell auf vorhandenen Daten? Sondern: Welche Abweichungen wurden bewusst getestet?
+          </p>
+          <h2>2. Durchschnittswerte verdecken kritische Fälle</h2>
+          <p>
+            Eine hohe Accuracy kann gleichzeitig mit einem inakzeptablen False-Accept-Risiko
+            auftreten. Für industrielle Entscheidungen müssen Kennzahlen getrennt nach Klasse,
+            Szenario und Fehlerfolge betrachtet werden. Ein übersehener Defekt hat eine andere
+            wirtschaftliche Bedeutung als ein fälschlich ausgeschleustes Gutteil.
+          </p>
+          <h2>3. Störgrößen werden nicht isoliert bewertet</h2>
+          <p>
+            Wenn sich die Erkennung verschlechtert, beginnt häufig die Fehlersuche: War es das
+            Licht, die Optik, die Lage, das Rauschen oder die Pipeline? Gezielte Sweeps machen
+            sichtbar, welche Parameter besonders empfindlich sind und ab welchem Bereich die
+            Leistung kippt.
+          </p>
+          <blockquote>
+            Produktionsreife bedeutet nicht, jede Abweichung auszuschließen. Sie bedeutet, die
+            relevanten Abweichungen zu kennen, zu messen und kontrollierbar zu machen.
+          </blockquote>
+          <h2>4. Die Abnahme ist nicht mit der technischen Evidenz verknüpft</h2>
+          <p>
+            Anforderungen, Testfälle, Messdaten und Freigabeentscheidungen liegen oft in
+            verschiedenen Dateien. Damit wird jede spätere Änderung teuer: Nach einem
+            Produktwechsel ist unklar, welche Tests wiederholt werden müssen und ob die neue
+            Version noch mit der freigegebenen Baseline vergleichbar ist.
+          </p>
+          <h2>5. Änderungen lösen keine strukturierte Re-Validierung aus</h2>
+          <p>
+            Neue Kamera, anderes Objektiv, geänderte Beleuchtung oder ein Pipeline-Update können
+            die Systemleistung beeinflussen. Eine belastbare Freigabe braucht deshalb
+            Versionierung, Baseline-Vergleich und definierte Release-Gates.
+          </p>
+          <h2>Ein pragmatischer Start</h2>
+          <ol>
+            <li>Die wirtschaftlich kritischen Fehlentscheidungen definieren.</li>
+            <li>Reale Störgrößen und erwartete Wertebereiche sammeln.</li>
+            <li>Messdaten nach Szenario und Produktvariante strukturieren.</li>
+            <li>KPI-Grenzen vor dem Test festlegen.</li>
+            <li>Ergebnisse, Worst Cases und Maßnahmen gemeinsam dokumentieren.</li>
+          </ol>
+          <div class="article-cta">
+            <h3>Wie validieren Sie heute Produktionsreife?</h3>
+            <p>
+              RobuTrace sucht Pilotpartner, die bestehende Prozesse und reale Use Cases in die
+              Produktentwicklung einbringen.
+            </p>
+            <a class="button button-light" href="../#kontakt">Austausch anfragen</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robustheitstests für industrielle Bildverarbeitung | RobuTrace</title>
+    <meta
+      name="description"
+      content="Wie industrielle Vision-Teams Störgrößen, Parametersweeps und Worst Cases systematisch statt per Trial-and-Error testen."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://robutrace.de/insights/robustheitstests-stoergroessen.html" />
+    <link rel="icon" href="../assets/robutrace-icon.png" type="image/png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="../"><img src="../assets/robutrace-logo.png?v=20260612" alt="RobuTrace" /></a>
+        <a class="button button-small" href="../#kontakt">Pilotprojekt besprechen</a>
+      </div>
+    </header>
+    <main class="article-page">
+      <article>
+        <header class="article-header container">
+          <div class="breadcrumb"><a href="../">Start</a><span>/</span><a href="./">Insights</a></div>
+          <p class="eyebrow">Teststrategie</p>
+          <h1>Störgrößen systematisch testen statt zufällig ausprobieren</h1>
+          <p class="article-deck">
+            Parametersweeps helfen, empfindliche Bereiche früh zu erkennen. Dafür braucht es
+            keine unüberschaubare Testmatrix, sondern eine saubere Priorisierung.
+          </p>
+          <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-06-12">12. Juni 2026</time></div>
+        </header>
+        <div class="article-cover container"><span>Stress → Signal</span></div>
+        <div class="article-content container">
+          <p>
+            In vielen Projekten werden Parameter solange verändert, bis das aktuelle Bild
+            funktioniert. Dieses Vorgehen kann einen Prototypen schnell voranbringen, erzeugt aber
+            noch kein Wissen über den stabilen Arbeitsbereich des Gesamtsystems.
+          </p>
+          <h2>Mit dem realen Prozess beginnen</h2>
+          <p>
+            Eine sinnvolle Robustheitsanalyse startet nicht mit beliebigen Bildfiltern, sondern
+            mit beobachtbaren Abweichungen der Anlage. Typische Kategorien sind Beleuchtung,
+            Fokus und Unschärfe, Bauteillage, Sensorrauschen, Verdeckung, Oberflächenvarianz und
+            Unterschiede zwischen Produktchargen.
+          </p>
+          <h2>Störgrößen einzeln und kombiniert betrachten</h2>
+          <p>
+            Ein eindimensionaler Sweep zeigt, ab welchem Wert eine Kennzahl kippt. Kombinationen
+            sind anschließend für ausgewählte kritische Bereiche sinnvoll. So bleibt die
+            Testmenge beherrschbar, ohne Wechselwirkungen komplett zu ignorieren.
+          </p>
+          <h2>Nicht nur den Mittelwert beobachten</h2>
+          <p>
+            Für jede Stufe sollten neben dem Gesamtwert auch Streuung, Klassenfehler und
+            Einzelsamples geprüft werden. Besonders wertvoll sind Fälle, bei denen kleine
+            Parameteränderungen zu großen Ergebnisänderungen führen. Sie markieren instabile
+            Entscheidungsgrenzen.
+          </p>
+          <blockquote>
+            Das Ziel ist nicht die größtmögliche Testmatrix, sondern eine nachvollziehbare Karte
+            des stabilen und des kritischen Arbeitsbereichs.
+          </blockquote>
+          <h2>Ein schlanker Testaufbau in fünf Schritten</h2>
+          <ol>
+            <li>Prozessrelevante Störgrößen und reale Wertebereiche definieren.</li>
+            <li>Nominalzustand und verbindliche KPI-Grenzen festlegen.</li>
+            <li>Einzelsweeps mit wenigen, aussagekräftigen Stufen durchführen.</li>
+            <li>Kritische Bereiche mit zusätzlichen Messpunkten und Kombinationen untersuchen.</li>
+            <li>Worst Cases, Ursachenhypothesen und Maßnahmen dokumentieren.</li>
+          </ol>
+          <h2>Was daraus für die Freigabe entsteht</h2>
+          <p>
+            Die Ergebnisse können in einen Testplan, eine Sensitivitätsübersicht und konkrete
+            Akzeptanzkriterien überführt werden. Damit wird aus Trial-and-Error ein wiederholbarer
+            Engineering-Prozess, der bei Variantenwechsel oder Pipeline-Update erneut genutzt
+            werden kann.
+          </p>
+          <div class="article-cta">
+            <h3>Welche Störgrößen bestimmen Ihren Linienalltag?</h3>
+            <p>
+              RobuTrace entwickelt den Testworkflow gemeinsam mit frühen Anwendern aus
+              Maschinenbau, Integration und Produktion.
+            </p>
+            <a class="button button-light" href="../#kontakt">Austausch anfragen</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../site.js"></script>
+  </body>
+</html>
