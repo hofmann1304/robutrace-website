@@ -3,6 +3,13 @@
 Statische Unternehmenswebsite fuer `robutrace.de`. Sie benoetigt kein CMS und kann bei fast
 jedem Static-Hosting-Anbieter veroeffentlicht werden.
 
+## Aktueller Stand
+
+Die Startseite wurde am 5. August 2026 auf den Stand des RobuTrace
+Engineering-Prototyps aktualisiert. Sie zeigt nun den fuenfstufigen Workflow von der
+Inspektionsaufgabe bis zur technischen Freigabe und benennt die Grenzen des aktuellen
+Prototyps ausdruecklich.
+
 ## Lokale Vorschau
 
 ```powershell

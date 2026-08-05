@@ -569,10 +569,19 @@ h3 {
   border-radius: var(--radius);
 }
 
+.steps-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .step {
   min-height: 350px;
   padding: 42px;
   background: var(--white);
+}
+
+.steps-five .step {
+  min-height: 390px;
+  padding: 30px 24px;
 }
 
 .step-icon {
@@ -584,6 +593,17 @@ h3 {
   background: var(--ice-100);
   border-radius: 16px;
   place-items: center;
+}
+
+.steps-five .step-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 28px;
+  color: #0f675b;
+  background: #dff3ee;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .step-icon svg {
@@ -605,6 +625,10 @@ h3 {
 
 .step h3 {
   margin: 13px 0 16px;
+}
+
+.steps-five .step h3 {
+  font-size: clamp(1.25rem, 1.6vw, 1.65rem);
 }
 
 .step p {
@@ -1287,6 +1311,14 @@ h3 {
   .hero-visual {
     width: min(850px, 92%);
     margin-inline: auto;
+  }
+
+  .steps-five {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps-five .step {
+    min-height: 330px;
   }
 
   .product-feature,
