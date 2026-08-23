@@ -123,7 +123,7 @@
                 <span aria-hidden="true">→</span>
               </a>
             </div>
-            <div class="hero-audiences" aria-label="Schwerpunkte">
+            <div class="hero-audiences" role="group" aria-label="Schwerpunkte">
               <span>Für</span>
               <strong>Systemauslegung</strong>
               <strong>Robustheitstests</strong>
@@ -495,26 +495,118 @@
       <section class="contact-section" id="kontakt">
         <div class="contact-grid" aria-hidden="true"></div>
         <div class="container contact-layout">
-          <div>
+          <div class="contact-intro">
             <p class="eyebrow">Pilotphase</p>
             <h2>Sie haben einen realen Vision-Use-Case? Prüfen wir ihn gemeinsam.</h2>
-          </div>
-          <div class="contact-copy">
             <p>
               Gesucht werden Maschinenbauer, Integratoren und Produktionsteams mit einem konkreten
               Prüfproblem, realen Randbedingungen und belastbaren Beispielbildern. Ziel ist kein
               Verkaufsgespräch, sondern ein fachlicher Pilot mit offenem Ergebnis.
             </p>
-            <div class="contact-actions">
-              <a class="button button-light" href="mailto:info@robutrace.de">
-                Pilotgespräch anfragen
-              </a>
-              <span>
-                Allgemeine Anfragen<br />
-                <strong>info@robutrace.de</strong>
-              </span>
-            </div>
+            <p class="contact-direct">
+              Sie möchten lieber direkt schreiben?
+              <a href="mailto:info@robutrace.de">info@robutrace.de</a>
+            </p>
           </div>
+          <form
+            class="contact-form"
+            id="kontaktformular"
+            action="https://form.taxi/s/ak62xooj"
+            method="post"
+          >
+            <input type="hidden" name="_subject" value="Neue Anfrage über robutrace.de" />
+            <input type="hidden" name="_next" value="https://robutrace.de/danke.html" />
+            <input type="hidden" name="_lang" value="de" />
+            <input
+              class="form-honeypot"
+              type="text"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
+            <div class="form-grid">
+              <label class="form-field" for="contact-name">
+                <span>Name <em aria-hidden="true">*</em></span>
+                <input
+                  id="contact-name"
+                  name="Name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </label>
+              <label class="form-field" for="contact-email">
+                <span>E-Mail <em aria-hidden="true">*</em></span>
+                <input
+                  id="contact-email"
+                  name="E-Mail"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+              <label class="form-field" for="contact-company">
+                <span>Unternehmen</span>
+                <input
+                  id="contact-company"
+                  name="Unternehmen"
+                  type="text"
+                  autocomplete="organization"
+                />
+              </label>
+              <label class="form-field" for="contact-topic">
+                <span>Anliegen <em aria-hidden="true">*</em></span>
+                <select id="contact-topic" name="Anliegen" required>
+                  <option value="" selected disabled>Bitte auswählen</option>
+                  <option value="Produktdemo oder Pilotprojekt">
+                    Produktdemo oder Pilotprojekt
+                  </option>
+                  <option value="Vision-Use-Case prüfen">Vision-Use-Case prüfen</option>
+                  <option value="Kooperation oder Partnerschaft">
+                    Kooperation oder Partnerschaft
+                  </option>
+                  <option value="Sonstiges">Sonstiges</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="form-field" for="contact-message">
+              <span>Nachricht <em aria-hidden="true">*</em></span>
+              <textarea
+                id="contact-message"
+                name="Nachricht"
+                rows="6"
+                minlength="20"
+                maxlength="3000"
+                placeholder="Beschreiben Sie kurz Prüfaufgabe, Bauteil und relevante Randbedingungen."
+                required
+              ></textarea>
+            </label>
+
+            <label class="form-consent" for="contact-privacy">
+              <input
+                id="contact-privacy"
+                name="Datenschutzhinweise"
+                type="checkbox"
+                value="zur Kenntnis genommen"
+                required
+              />
+              <span>
+                Ich habe die <a href="./datenschutz.html">Datenschutzhinweise</a> zur
+                Verarbeitung meiner Anfrage zur Kenntnis genommen. <em aria-hidden="true">*</em>
+              </span>
+            </label>
+
+            <div class="form-submit-row">
+              <button class="button" type="submit">Anfrage senden</button>
+              <span><em aria-hidden="true">*</em> Pflichtfelder</span>
+            </div>
+            <p class="form-note">
+              Bitte senden Sie vertrauliche Beispielbilder erst nach persönlicher Rücksprache.
+            </p>
+          </form>
         </div>
       </section>
     </main>
