@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>False accepts and false rejects in vision engineering | RobuTrace</title>
+    <meta
+      name="description"
+      content="How false accepts, false rejects and yield are used in vision engineering and connected to economic risk."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://robutrace.de/en/insights/false-accept-false-reject.html" />
+    <link rel="alternate" hreflang="de" href="https://robutrace.de/insights/false-accept-false-reject.html" />
+    <link rel="alternate" hreflang="en" href="https://robutrace.de/en/insights/false-accept-false-reject.html" />
+    <link rel="alternate" hreflang="x-default" href="https://robutrace.de/insights/false-accept-false-reject.html" />
+    <link rel="icon" href="../../assets/robutrace-icon-transparent.png" type="image/png" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="../"><img src="../../assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" /></a>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Choose language">
+            <a href="../../insights/false-accept-false-reject.html" lang="de">DE</a>
+            <span aria-hidden="true">/</span>
+            <a href="./false-accept-false-reject.html" lang="en" aria-current="page">EN</a>
+          </nav>
+          <a class="button button-small" href="../#contact">Discuss a product demo</a>
+        </div>
+      </div>
+    </header>
+    <main class="article-page">
+      <article>
+        <header class="article-header container">
+          <div class="breadcrumb"><a href="../">Home</a><span>/</span><a href="./">Insights</a></div>
+          <p class="eyebrow">KPI practice</p>
+          <h1>Using false accepts and false rejects correctly in engineering</h1>
+          <p class="article-deck">
+            An overall score rarely answers the most important question: which wrong decision can
+            the process tolerate, and which one can it not?
+          </p>
+          <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-06-12">12 June 2026</time></div>
+        </header>
+        <div class="article-cover container"><span>FA / FR</span></div>
+        <div class="article-content container">
+          <p>
+            A binary quality inspection has two fundamentally different error types. A false
+            accept allows a defective part to pass. A false reject removes a good part. Both
+            reduce process quality, but their consequences can be completely different.
+          </p>
+          <h2>False accept: the quality risk</h2>
+          <p>
+            A defect is classified as acceptable. Depending on the application, this can lead to
+            rework at the customer's site, complaints, recalls or safety problems. The permitted
+            threshold is therefore particularly low in critical applications.
+          </p>
+          <h2>False reject: the productivity risk</h2>
+          <p>
+            A good part is rejected incorrectly. The consequences are scrap, manual reinspection,
+            lower line throughput and unnecessary cost. A system can therefore appear very safe
+            and still be economically unusable.
+          </p>
+          <h2>Why accuracy is not enough</h2>
+          <p>
+            With imbalanced classes, accuracy may look excellent while the rare but important
+            defect class is detected poorly. At a minimum, the confusion matrix, false-accept
+            rate, false-reject rate, yield and the corresponding sample size should be considered
+            together.
+          </p>
+          <blockquote>
+            KPI limits should be derived from process risks, not retrofitted to the results after
+            the test.
+          </blockquote>
+          <h2>Four rules for defensible engineering decisions</h2>
+          <ol>
+            <li>State the consequences and costs of both error types.</li>
+            <li>Set and version limits before measurements begin.</li>
+            <li>Evaluate KPIs separately by scenario, variant and relevant disturbance factor.</li>
+            <li>Report confidence and data coverage alongside the percentage value.</li>
+          </ol>
+          <h2>From KPI to action</h2>
+          <p>
+            An exceeded limit is not a diagnosis. Only by connecting it to sensitivity analysis
+            and worst-case samples can teams determine whether optics, illumination, data,
+            parameters or decision logic should be changed.
+          </p>
+          <div class="article-cta">
+            <h3>Structure KPI logic for your use case</h3>
+            <p>
+              In a pilot discussion, we examine the current engineering workflow and the wrong
+              decisions that matter economically.
+            </p>
+            <a class="button button-light" href="../#contact">Request a discussion</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../../site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>When is a machine-vision system production-ready? | RobuTrace</title>
+    <meta
+      name="description"
+      content="Why good laboratory results do not prove production readiness and which engineering gaps industrial machine-vision teams need to close."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://robutrace.de/en/insights/production-ready-vision-systems.html" />
+    <link rel="alternate" hreflang="de" href="https://robutrace.de/insights/produktionsreife-vision-systeme.html" />
+    <link rel="alternate" hreflang="en" href="https://robutrace.de/en/insights/production-ready-vision-systems.html" />
+    <link rel="alternate" hreflang="x-default" href="https://robutrace.de/insights/produktionsreife-vision-systeme.html" />
+    <link rel="icon" href="../../assets/robutrace-icon-transparent.png" type="image/png" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="../"><img src="../../assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" /></a>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Choose language">
+            <a href="../../insights/produktionsreife-vision-systeme.html" lang="de">DE</a>
+            <span aria-hidden="true">/</span>
+            <a href="./production-ready-vision-systems.html" lang="en" aria-current="page">EN</a>
+          </nav>
+          <a class="button button-small" href="../#contact">Discuss a product demo</a>
+        </div>
+      </div>
+    </header>
+    <main class="article-page">
+      <article>
+        <header class="article-header container">
+          <div class="breadcrumb"><a href="../">Home</a><span>/</span><a href="./">Insights</a></div>
+          <p class="eyebrow">Vision engineering</p>
+          <h1>Why good laboratory results do not prove production readiness</h1>
+          <p class="article-deck">
+            A vision system can perform brilliantly on the development dataset and still become
+            unstable on the production line. What matters is not only its performance under ideal
+            conditions, but how predictably it responds to real deviations.
+          </p>
+          <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-06-12">12 June 2026</time></div>
+        </header>
+        <div class="article-cover container"><span>Lab ≠ Line</span></div>
+        <div class="article-content container">
+          <p>
+            Development conditions are controllable: illumination, part position, camera
+            position and data quality are largely known. Production introduces many small
+            deviations at the same time. That is where a system proves whether it is merely
+            demonstrable or genuinely production-ready.
+          </p>
+          <h2>1. The dataset does not fully represent the production line</h2>
+          <p>
+            A good test dataset is necessary, but rarely complete. New batches, surfaces,
+            contamination, reflections or previously unseen defect types can change the data
+            distribution. The central question is therefore not only how well the model performs
+            on available data, but which deviations were deliberately tested.
+          </p>
+          <h2>2. Averages hide critical cases</h2>
+          <p>
+            High accuracy can coexist with an unacceptable false-accept risk. Industrial
+            decisions require metrics to be evaluated by class, scenario and failure consequence.
+            A missed defect has a different economic impact from a good part being rejected.
+          </p>
+          <h2>3. Disturbance factors are not assessed in isolation</h2>
+          <p>
+            When detection performance drops, the search for a cause begins: illumination,
+            optics, position, noise or the pipeline? Targeted sweeps show which parameters are
+            especially sensitive and at which point performance begins to fail.
+          </p>
+          <blockquote>
+            Production readiness does not mean eliminating every deviation. It means knowing,
+            measuring and controlling the relevant deviations.
+          </blockquote>
+          <h2>4. Decisions are not linked to technical evidence</h2>
+          <p>
+            Requirements, test cases, measurements and engineering decisions often live in
+            different files. Every later change then becomes expensive: after a product change,
+            it is unclear which tests must be repeated and whether the new version is still
+            comparable with the released baseline.
+          </p>
+          <h2>5. Changes do not trigger a structured reassessment</h2>
+          <p>
+            A new camera, a different lens, modified illumination or a pipeline update can affect
+            system performance. A defensible engineering process therefore needs versioning,
+            baseline comparison and defined decision points.
+          </p>
+          <h2>A pragmatic starting point</h2>
+          <ol>
+            <li>Define the economically critical wrong decisions.</li>
+            <li>Collect real disturbance factors and their expected value ranges.</li>
+            <li>Structure measurement data by scenario and product variant.</li>
+            <li>Set KPI limits before testing begins.</li>
+            <li>Document results, worst cases and actions together.</li>
+          </ol>
+          <div class="article-cta">
+            <h3>How do you structure vision engineering today?</h3>
+            <p>
+              RobuTrace is looking for pilot users who can bring existing processes and real use
+              cases into product development.
+            </p>
+            <a class="button button-light" href="../#contact">Request a discussion</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../../site.js"></script>
+  </body>
+</html>

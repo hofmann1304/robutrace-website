@@ -258,6 +258,37 @@ h3 {
   gap: 27px;
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--slate-500);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.language-switcher a {
+  color: var(--slate-500);
+  text-decoration: none;
+}
+
+.language-switcher a:hover,
+.language-switcher a[aria-current="page"] {
+  color: var(--blue-600);
+}
+
+.language-switcher a:focus-visible {
+  outline: 3px solid var(--blue-300);
+  outline-offset: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
 .main-nav > a:not(.button) {
   position: relative;
   color: var(--navy-800);
@@ -1591,6 +1622,13 @@ h3 {
     margin-top: 25px;
   }
 
+  .main-nav .language-switcher {
+    justify-content: flex-start;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+
   .split-intro,
   .product-feature,
   .founder-layout,
@@ -1691,6 +1729,14 @@ h3 {
 
   .brand {
     width: 205px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+  .header-actions .button-small {
+    display: none;
   }
 
   .main-nav {

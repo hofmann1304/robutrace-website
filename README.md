@@ -10,6 +10,10 @@ Engineering-Prototyps aktualisiert. Sie zeigt nun den fuenfstufigen Workflow von
 Inspektionsaufgabe bis zur technischen Freigabe und benennt die Grenzen des aktuellen
 Prototyps ausdruecklich.
 
+Seit dem 31. August 2026 ist die Website vollstaendig zweisprachig. Die englischen Seiten
+liegen unter `en/`; jede indexierbare deutsche Seite verweist per `hreflang` auf ihre englische
+Entsprechung und umgekehrt.
+
 ## Lokale Vorschau
 
 ```powershell
@@ -29,12 +33,15 @@ Danach `http://127.0.0.1:4174/` aufrufen.
 
 ## Neue Insights veroeffentlichen
 
-1. Eine bestehende Datei unter `insights/` kopieren und Inhalt, Titel, Description, Canonical URL
-   und Datum anpassen.
-2. Auf `insights/index.html` eine neue Artikelkarte ergaenzen.
-3. Den Beitrag auf der Startseite anzeigen oder die aelteste Karte ersetzen.
-4. Die neue URL in `sitemap.xml` aufnehmen und `lastmod` aktualisieren.
-5. Nach Veroeffentlichung die URL in der Google Search Console zur Indexierung einreichen.
+1. Eine deutsche Datei unter `insights/` und die passende englische Datei unter `en/insights/`
+   anlegen. Inhalt, Titel, Description, Canonical URL, Datum und Autorenangabe anpassen.
+2. Beide Artikel mit gegenseitigen `hreflang`-Links fuer `de`, `en` und `x-default` versehen.
+3. Auf `insights/index.html` und `en/insights/index.html` je eine Artikelkarte ergaenzen.
+4. Den Beitrag auf beiden Startseiten anzeigen oder jeweils die aelteste Karte ersetzen.
+5. Beide URLs in `sitemap.xml` aufnehmen und `lastmod` aktualisieren.
+6. Inhaltliche Aussagen mit belastbaren Primaerquellen pruefen; keine Produktfunktion,
+   Leistungszahl oder Kundenerfahrung erfinden.
+7. Nach Veroeffentlichung die URLs in der Google Search Console zur Indexierung einreichen.
 
 ## SEO-Grundlage
 

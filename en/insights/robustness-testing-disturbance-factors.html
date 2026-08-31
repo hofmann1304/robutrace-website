@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Robustness testing for industrial machine vision | RobuTrace</title>
+    <meta
+      name="description"
+      content="How industrial vision teams test disturbance factors, parameter sweeps and worst cases systematically instead of relying on trial and error."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://robutrace.de/en/insights/robustness-testing-disturbance-factors.html" />
+    <link rel="alternate" hreflang="de" href="https://robutrace.de/insights/robustheitstests-stoergroessen.html" />
+    <link rel="alternate" hreflang="en" href="https://robutrace.de/en/insights/robustness-testing-disturbance-factors.html" />
+    <link rel="alternate" hreflang="x-default" href="https://robutrace.de/insights/robustheitstests-stoergroessen.html" />
+    <link rel="icon" href="../../assets/robutrace-icon-transparent.png" type="image/png" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="../"><img src="../../assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" /></a>
+        <div class="header-actions">
+          <nav class="language-switcher" aria-label="Choose language">
+            <a href="../../insights/robustheitstests-stoergroessen.html" lang="de">DE</a>
+            <span aria-hidden="true">/</span>
+            <a href="./robustness-testing-disturbance-factors.html" lang="en" aria-current="page">EN</a>
+          </nav>
+          <a class="button button-small" href="../#contact">Discuss a product demo</a>
+        </div>
+      </div>
+    </header>
+    <main class="article-page">
+      <article>
+        <header class="article-header container">
+          <div class="breadcrumb"><a href="../">Home</a><span>/</span><a href="./">Insights</a></div>
+          <p class="eyebrow">Test strategy</p>
+          <h1>Test disturbance factors systematically instead of trying them at random</h1>
+          <p class="article-deck">
+            Parameter sweeps help teams identify sensitive regions early. This does not require an
+            unmanageable test matrix, but it does require clear prioritisation.
+          </p>
+          <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-06-12">12 June 2026</time></div>
+        </header>
+        <div class="article-cover container"><span>Stress → Signal</span></div>
+        <div class="article-content container">
+          <p>
+            In many projects, parameters are changed until the current image works. This can move
+            a prototype forward quickly, but it does not create knowledge about the stable
+            operating range of the complete system.
+          </p>
+          <h2>Start with the real process</h2>
+          <p>
+            A meaningful robustness analysis does not start with arbitrary image filters, but
+            with observable deviations in the equipment. Typical categories include illumination,
+            focus and blur, part position, sensor noise, occlusion, surface variation and
+            differences between product batches.
+          </p>
+          <h2>Assess disturbance factors separately and in combination</h2>
+          <p>
+            A one-dimensional sweep shows the point at which a metric begins to fail. Combinations
+            are then useful for selected critical regions. This keeps the test volume manageable
+            without ignoring interactions completely.
+          </p>
+          <h2>Do not watch the average alone</h2>
+          <p>
+            At each level, teams should inspect variation, class-specific errors and individual
+            samples alongside the overall score. Cases where small parameter changes cause large
+            result changes are particularly valuable because they mark unstable decision
+            boundaries.
+          </p>
+          <blockquote>
+            The goal is not the largest possible test matrix, but a traceable map of the stable
+            and critical operating ranges.
+          </blockquote>
+          <h2>A lean test design in five steps</h2>
+          <ol>
+            <li>Define process-relevant disturbance factors and realistic value ranges.</li>
+            <li>Set the nominal state and binding KPI limits.</li>
+            <li>Run individual sweeps with a few informative levels.</li>
+            <li>Investigate critical regions with additional measurements and combinations.</li>
+            <li>Document worst cases, cause hypotheses and actions.</li>
+          </ol>
+          <h2>What this creates for engineering decisions</h2>
+          <p>
+            The results can be converted into a test plan, a sensitivity overview and concrete
+            acceptance criteria. This turns trial and error into a repeatable engineering process
+            that can be reused after a variant change or pipeline update.
+          </p>
+          <div class="article-cta">
+            <h3>Which disturbance factors define everyday operation on your line?</h3>
+            <p>
+              RobuTrace develops the test workflow together with early users from machine
+              engineering, integration and production.
+            </p>
+            <a class="button button-light" href="../#contact">Request a discussion</a>
+          </div>
+        </div>
+      </article>
+    </main>
+    <script src="../../site.js"></script>
+  </body>
+</html>
