@@ -51,7 +51,8 @@ Danach `http://127.0.0.1:4174/` aufrufen.
 - Strukturierte Organisationsdaten auf der Startseite
 - Open-Graph-Vorschaubild
 - `robots.txt` und XML-Sitemap
-- Cookie-freie Grundversion ohne externe Fonts oder Tracking
+- Cookie-freie Reichweitenmessung mit Cloudflare Web Analytics; keine externen Fonts und kein
+  Marketing- oder Werbe-Tracking
 
 SEO ist kein einmaliger Schalter. Sichtbarkeit entsteht aus technischer Qualitaet, klarer
 Positionierung, hilfreichen Fachbeitraegen, Verlinkungen und regelmaessiger Pflege.
