@@ -992,6 +992,36 @@ h3 {
   background: linear-gradient(145deg, #04203f, #045987);
 }
 
+.visual-d {
+  background:
+    linear-gradient(rgba(122, 224, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(122, 224, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(145deg, #03182f, #0876a5);
+  background-size: 32px 32px, 32px 32px, auto;
+}
+
+.visual-d::before,
+.visual-d::after {
+  position: absolute;
+  content: "";
+}
+
+.visual-d::before {
+  inset: 24% 18%;
+  border: 2px solid rgba(139, 231, 255, 0.72);
+  box-shadow: 0 0 24px rgba(76, 206, 244, 0.32);
+}
+
+.visual-d::after {
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #d6f8ff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .matrix-dots {
   position: absolute;
   inset: 24px;
@@ -1454,6 +1484,41 @@ h3 {
   border-left: 4px solid var(--blue-500);
   font-size: 1.2rem;
   font-weight: 650;
+}
+
+.article-formula {
+  margin: 38px 0;
+  padding: 26px 28px;
+  background: var(--ice-100);
+  border: 1px solid rgba(12, 127, 169, 0.2);
+  border-radius: 16px;
+}
+
+.article-formula h3 {
+  margin-top: 0;
+}
+
+.article-formula p:last-child {
+  margin-bottom: 0;
+}
+
+.article-formula code {
+  overflow-wrap: anywhere;
+}
+
+.article-sources {
+  margin-top: 65px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(10, 45, 78, 0.16);
+}
+
+.article-sources li {
+  margin-bottom: 16px;
+}
+
+.source-note {
+  color: #557086;
+  font-size: 0.9rem;
 }
 
 .article-cta {
