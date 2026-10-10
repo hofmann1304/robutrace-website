@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Null Fehler: Stichprobengröße für Vision-Tests | RobuTrace</title>
+  <meta name="description" content="Stichprobengröße für Vision-Prüfungen planen: einseitige Konfidenzgrenzen bei null Fehlern, korrekte FA/FR-Nenner und Grenzen abhängiger Bilddaten." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://robutrace.de/insights/null-fehler-stichprobengroesse.html" />
+  <link rel="alternate" hreflang="de" href="https://robutrace.de/insights/null-fehler-stichprobengroesse.html" />
+  <link rel="alternate" hreflang="en" href="https://robutrace.de/en/insights/zero-errors-validation-sample-size.html" />
+  <link rel="alternate" hreflang="x-default" href="https://robutrace.de/insights/null-fehler-stichprobengroesse.html" />
+  <link rel="icon" href="../assets/robutrace-icon-transparent.png" type="image/png" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Null Fehler im Test: Wie viele Prüfteile braucht ein belastbarer Nachweis?",
+  "description": "Stichprobengröße für Vision-Prüfungen planen: einseitige Konfidenzgrenzen bei null Fehlern, korrekte FA/FR-Nenner und Grenzen abhängiger Bilddaten.",
+  "inLanguage": "de",
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "author": {
+    "@type": "Person",
+    "name": "Sara Hofmann",
+    "url": "https://sarahofmann.de"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RobuTrace",
+    "url": "https://robutrace.de"
+  },
+  "mainEntityOfPage": "https://robutrace.de/insights/null-fehler-stichprobengroesse.html"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="../"><img src="../assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" /></a>
+      <div class="header-actions">
+        <nav class="language-switcher" aria-label="Sprache wählen">
+          <a href="./null-fehler-stichprobengroesse.html" lang="de" aria-current="page">DE</a>
+          <span aria-hidden="true">/</span>
+          <a href="../en/insights/zero-errors-validation-sample-size.html" lang="en">EN</a>
+        </nav>
+        <a class="button button-small" href="../#kontakt">Produktdemo besprechen</a>
+      </div>
+    </div>
+  </header>
+  <main class="article-page" id="main">
+    <article>
+      <header class="article-header container">
+        <div class="breadcrumb"><a href="../">Start</a><span>/</span><a href="./">Insights</a></div>
+        <p class="eyebrow">Validierung</p>
+        <h1>Null Fehler im Test: Wie viele Prüfteile braucht ein belastbarer Nachweis?</h1>
+        <p class="article-deck">0 von 100 ist ein Messergebnis. Ob damit ein Fehlerratenziel belegt ist, hängt von Stichprobe, Bezugsgröße und Testplan ab.</p>
+        <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-10-10">10. Oktober 2026</time></div>
+      </header>
+      <div class="article-cover container"><span>Stichprobe → Konfidenzgrenze</span></div>
+      <div class="article-content container">
+<p>Eine Kamera prüft 100 bekannte Fehlerteile und lässt keines passieren. Das Team sieht eine False-Accept-Rate von 0 % und möchte die Anlage freigeben. Für ein vereinbartes Ziel von höchstens 1 % reicht dieses Ergebnis unter einem einfachen Binomialmodell jedoch noch nicht: Die einseitige obere 95-%-Konfidenzgrenze liegt bei rund 2,95 %. Dieser Beitrag zeigt die Rechnung und übersetzt sie in einen praktischen Prüfplan. Alle Zahlen sind Rechenbeispiele, keine RobuTrace-Messwerte.</p>
+<h2>1. Zuerst festlegen, welcher Fehler gezählt wird</h2>
+<p>Für diesen Beitrag bedeutet False Accept: Ein tatsächlich fehlerhaftes Teil wird als gut akzeptiert. Der Nenner sind die geprüften Fehlerteile. False Reject bedeutet: Ein tatsächlich gutes Teil wird ausgeschleust; der Nenner sind die geprüften Gutteile. Andere Berichte können andere Bezugsgrößen verwenden. Deshalb gehören Zähler und Nenner neben jeden Prozentwert.</p>
+<p>Beispiel: Ein Test enthält 9.900 Gutteile und 100 Fehlerteile. Null übersehene Defekte ergeben 0 von 100 False Accepts, nicht 0 von 10.000. Die große Gutteilmenge verbessert den Nachweis für die Erkennung der Fehlerklasse nicht. Eine Aussage über fehlerhafte Auslieferungen pro produziertem Teil benötigt zusätzlich die Defekthäufigkeit und den tatsächlichen Prozessablauf.</p>
+<h2>2. Die Rechnung für null beobachtete Fehler</h2>
+<p>Das Modell nimmt eine vorab festgelegte Zahl unabhängiger binärer Prüfentscheidungen mit derselben Fehlerwahrscheinlichkeit p an. Aus der <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm">Binomialverteilung</a> folgt für null Fehler: P(X = 0) = (1 − p)<sup>n</sup>. Setzt man diese Wahrscheinlichkeit gleich α, erhält man die einseitige exakte obere Grenze. NIST beschreibt die zugrunde liegende <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm">exakte Binomialmethode</a>.</p>
+<div class="article-formula" role="group" aria-labelledby="formula">
+<h3 id="formula">Für X = 0 und n &gt; 0</h3>
+<p><code>p_oben = 1 − α^(1/n)</code></p>
+<p><code>n_min = aufrunden(ln(α) / ln(1 − p_Ziel))</code></p>
+<p>Für eine einseitige 95-%-Grenze ist α = 0,05. p_Ziel wird als Anteil eingesetzt: 1 % entspricht 0,01. Die zweite Formel setzt 0 &lt; p_Ziel &lt; 1 voraus.</p>
+</div>
+<p>Eigene Berechnung aus diesen Gleichungen, jeweils bei null Fehlern:</p>
+<ul>
+<li>100 unabhängige Prüfentscheidungen: obere Grenze rund 2,951 %.</li>
+<li>300 unabhängige Prüfentscheidungen: obere Grenze rund 0,994 %.</li>
+<li>Ziel 1 %: mindestens 299 Prüfentscheidungen.</li>
+<li>Ziel 0,1 %: mindestens 2.995 Prüfentscheidungen.</li>
+<li>Ziel 0,01 % beziehungsweise 100 ppm: mindestens 29.956 Prüfentscheidungen.</li>
+</ul>
+<p>Die Mindestzahlen sind keine allgemeine Vorgabe für jede Anlage. Sie beantworten ausschließlich diese Frage: Wie groß muss ein vorher festgelegter Test sein, damit bei null Fehlern die einseitige 95-%-Obergrenze den gewählten Zielwert nicht überschreitet? Wenn Fehler auftreten, gilt die Null-Fehler-Formel nicht.</p>
+<h2>3. Was „95 %“ tatsächlich bedeutet</h2>
+<p>Die Konfidenz beschreibt die langfristige Abdeckung des statistischen Verfahrens bei wiederholter Stichprobenziehung unter den Modellannahmen. Sie ist weder ein Modell-Confidence-Score noch eine Garantie für die nächste Schicht. Auch bedeutet sie nicht, dass nach diesem Test mit 95 % Wahrscheinlichkeit jeder einzelne neue Prüfentscheid richtig ist.</p>
+<p>Ein zweiseitiges 95-%-Intervall verteilt die Irrtumswahrscheinlichkeit auf beide Seiten und liefert hier eine andere Obergrenze. Für eine ausschließlich nach oben begrenzte Fehlerrate ist die einseitige Fragestellung vorab zu dokumentieren. Wählen Sie die Intervallart nicht nachträglich danach aus, welche Variante das Ziel gerade erfüllt.</p>
+<h2>4. 300 Bilder sind nicht automatisch 300 unabhängige Prüfteile</h2>
+<p>Dreißig Aufnahmen desselben Teils unter nahezu identischen Bedingungen liefern andere Evidenz als dreißig unabhängig ausgewählte Teile. Wiederholungen können die Wiederholbarkeit untersuchen, vermehren aber nicht automatisch die unabhängige Stichprobe. Gemeinsame Charge, Werkzeug, Oberfläche oder Aufnahmefolge können Fehlerentscheidungen korrelieren.</p>
+<p>Legen Sie deshalb die Versuchseinheit fest: Teil, Baugruppe oder vollständiger Prüfzyklus. Mehrere Ansichten eines Teils gehören zusammen, wenn die spätere Entscheidung auf Teilebene fällt. Für Training und abschließenden Test sollten Bilder desselben Teils nicht zufällig auf beide Mengen verteilt werden. Die <a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn-Dokumentation zur gruppierten Evaluation</a> erläutert, warum abhängige Gruppen getrennt behandelt werden müssen. Die Übertragung auf Teile und Chargen ist hier eine Engineering-Empfehlung.</p>
+<h2>5. Ein belastbarer Ablauf für das 1-%-Beispiel</h2>
+<ol>
+<li><strong>Geltungsbereich festlegen:</strong> Welche Fehlerarten, Varianten, Größen, Oberflächen und Betriebsbedingungen soll die Aussage abdecken? Bestätigen Sie die Referenzlabels unabhängig von der zu prüfenden Auswertung.</li>
+<li><strong>Systemstand einfrieren:</strong> Kamera, Optik, Licht, Software, Modell, ROI und Schwellenwerte versionieren. Parametrierbilder vom abschließenden Test trennen.</li>
+<li><strong>Plan vorab schreiben:</strong> Für dieses Beispiel 299 unabhängig ausgewählte Fehlerteile, keine False Accepts und eine einseitige 95-%-Obergrenze von höchstens 1 %. Gutteile erhalten einen eigenen False-Reject-Plan.</li>
+<li><strong>Vollständig auswerten:</strong> Alle vorgesehenen Entscheidungen einschließlich Fehlaufnahmen und Ausschlüssen nachvollziehbar dokumentieren. Einen aufgetretenen Fehler nicht durch einen Neustart des Zählers verschwinden lassen.</li>
+<li><strong>Ergebnis begrenzen:</strong> Zähler, Nenner, Grenze, Systemversion und abgedeckte Population berichten. Nicht abgedeckte Varianten ausdrücklich offenlassen.</li>
+</ol>
+<p>Bei einem Fehler muss mit der tatsächlichen Fehlerzahl neu ausgewertet werden. Eine Implementierungsreferenz bietet <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html">SciPy binomtest mit proportion_ci</a>; Richtung und Konfidenzniveau müssen zur Fragestellung passen. Wiederholt „weiterprüfen, bis es passt“ benötigt einen dafür ausgelegten sequenziellen Testplan, nicht die unveränderte Feststichprobenrechnung.</p>
+<h2>6. Abdeckung lässt sich nicht durch eine große Gesamtzahl ersetzen</h2>
+<p>Wer 299 deutlich sichtbare Kratzer prüft, hat damit keine Nachweisgrenze für kaum sichtbare Risse bestimmt. Ein Gesamtergebnis gilt für die untersuchte Verteilung. Wenn jede Defektart ein eigenes Ziel erfüllen soll, braucht jede eine passende Auswertung. Mehrere einzelne 95-%-Aussagen ergeben zudem nicht automatisch einen gemeinsamen 95-%-Nachweis für alle Gruppen.</p>
+<p>Störgrößenversuche und Grenzmuster ergänzen den statistischen Plan. Sie sind gezielt ausgewählt und dürfen nicht ohne Begründung als Zufallsstichprobe der Produktion interpretiert werden. Der bestehende Beitrag zu <a href="./robustheitstests-stoergroessen.html">systematischen Robustheitstests</a> hilft bei dieser Abdeckung; die <a href="./false-accept-false-reject.html">FA/FR-Grundlagen</a> klären die unterschiedlichen Fehlerfolgen.</p>
+<h2>7. Einordnung in RobuTrace</h2>
+<p>Der geprüfte Entwicklungsstand berechnet beobachtete False-Accept- und False-Reject-Raten aus importierten, gekennzeichneten Messdatensätzen und trennt sie von simulativen Projektionen. Die hier hergeleitete exakte Konfidenzgrenze ist eine ergänzende Auswertungsmethode dieses Beitrags; daraus wird keine vorhandene automatische RobuTrace-Abnahmefunktion abgeleitet. Ein grüner lokaler Status ersetzt weder einen geeigneten Stichprobenplan noch eine industrielle Validierung.</p>
+<blockquote>Ein brauchbarer Ergebnistext lautet: „0 False Accepts bei 299 unabhängigen Fehlerteilen; einseitige exakte 95-%-Obergrenze rund 0,997 %; gültig für den dokumentierten Systemstand und die untersuchte Fehlerpopulation.“</blockquote>
+        <section class="article-sources" aria-labelledby="sources">
+          <h2 id="sources">Quellen und Rechenbasis</h2>
+          <ul>
+            <li><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm">NIST: Binomial Distribution</a></li>
+            <li><a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm">NIST Dataplot: Exact Binomial</a></li>
+            <li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html">SciPy: binomtest</a></li>
+            <li><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn: Cross-validation</a></li>
+          </ul>
+          <p class="source-note">Quellen geprüft am 10. Oktober 2026. Zahlenbeispiele selbst aus den angegebenen Gleichungen berechnet.</p>
+        </section>
+        <div class="article-cta">
+          <h3>Was muss Ihr Test tatsächlich nachweisen?</h3>
+          <p>Besprechen Sie Prüfaufgabe, Fehlerfolgen und offene Evidenz mit uns.</p>
+          <a class="button button-light" href="../#kontakt">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="../site.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"5776316e28e2464997e30630279623a7"}'></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zero errors: sample size for vision validation | RobuTrace</title>
+  <meta name="description" content="Plan machine-vision sample sizes with one-sided confidence bounds for zero errors, correct false-accept denominators and limits of dependent image data." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://robutrace.de/en/insights/zero-errors-validation-sample-size.html" />
+  <link rel="alternate" hreflang="de" href="https://robutrace.de/insights/null-fehler-stichprobengroesse.html" />
+  <link rel="alternate" hreflang="en" href="https://robutrace.de/en/insights/zero-errors-validation-sample-size.html" />
+  <link rel="alternate" hreflang="x-default" href="https://robutrace.de/insights/null-fehler-stichprobengroesse.html" />
+  <link rel="icon" href="../../assets/robutrace-icon-transparent.png" type="image/png" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Zero errors in testing: how many parts make a defensible validation sample?",
+  "description": "Plan machine-vision sample sizes with one-sided confidence bounds for zero errors, correct false-accept denominators and limits of dependent image data.",
+  "inLanguage": "en",
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "author": {
+    "@type": "Person",
+    "name": "Sara Hofmann",
+    "url": "https://sarahofmann.de"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RobuTrace",
+    "url": "https://robutrace.de"
+  },
+  "mainEntityOfPage": "https://robutrace.de/en/insights/zero-errors-validation-sample-size.html"
+}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="../"><img src="../../assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" /></a>
+      <div class="header-actions">
+        <nav class="language-switcher" aria-label="Choose language">
+          <a href="../../insights/null-fehler-stichprobengroesse.html" lang="de">DE</a>
+          <span aria-hidden="true">/</span>
+          <a href="./zero-errors-validation-sample-size.html" lang="en" aria-current="page">EN</a>
+        </nav>
+        <a class="button button-small" href="../#contact">Discuss a product demo</a>
+      </div>
+    </div>
+  </header>
+  <main class="article-page" id="main">
+    <article>
+      <header class="article-header container">
+        <div class="breadcrumb"><a href="../">Home</a><span>/</span><a href="./">Insights</a></div>
+        <p class="eyebrow">Validation</p>
+        <h1>Zero errors in testing: how many parts make a defensible validation sample?</h1>
+        <p class="article-deck">0 out of 100 is an observed result. Whether it supports an error-rate target depends on the sample, denominator and test plan.</p>
+        <div class="article-byline"><span>Sara Hofmann</span><span>·</span><time datetime="2026-10-10">10 October 2026</time></div>
+      </header>
+      <div class="article-cover container"><span>Sample → Confidence bound</span></div>
+      <div class="article-content container">
+<p>A camera inspects 100 known defective parts and accepts none of them. The team sees a false-accept rate of 0% and wants to release the system. Under a simple binomial model, this is not enough to support a target of at most 1%: the one-sided upper 95% confidence bound is about 2.95%. This article works through the calculation and turns it into a practical test plan. All numbers are illustrative calculations, not RobuTrace measurements.</p>
+<h2>1. Define the error being counted first</h2>
+<p>Here, a false accept means accepting a genuinely defective part as good. The denominator is the number of defective parts tested. A false reject means rejecting a genuinely good part; its denominator is the number of good parts tested. Other reports may use different denominators. Always report the counts alongside the percentage.</p>
+<p>Example: a test contains 9,900 good parts and 100 defective parts. Zero missed defects means 0 out of 100 false accepts, not 0 out of 10,000. Adding good parts does not strengthen the evidence for detecting defective parts. A claim about defective shipments per produced part additionally requires the defect prevalence and the actual process flow.</p>
+<h2>2. The calculation for zero observed errors</h2>
+<p>The model assumes a fixed, predeclared number of independent binary decisions with the same error probability p. The <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm">binomial distribution</a> gives P(X = 0) = (1 − p)<sup>n</sup>. Setting this probability equal to α yields the exact one-sided upper bound. NIST documents the underlying <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm">exact binomial method</a>.</p>
+<div class="article-formula" role="group" aria-labelledby="formula">
+<h3 id="formula">For X = 0 and n &gt; 0</h3>
+<p><code>p_upper = 1 − α^(1/n)</code></p>
+<p><code>n_min = ceil(ln(α) / ln(1 − p_target))</code></p>
+<p>For a one-sided 95% bound, α = 0.05. Enter p_target as a proportion: 1% is 0.01. The second formula requires 0 &lt; p_target &lt; 1.</p>
+</div>
+<p>Our calculations from these equations, each assuming zero errors:</p>
+<ul>
+<li>100 independent decisions: upper bound about 2.951%.</li>
+<li>300 independent decisions: upper bound about 0.994%.</li>
+<li>1% target: at least 299 decisions.</li>
+<li>0.1% target: at least 2,995 decisions.</li>
+<li>0.01%, or 100 ppm, target: at least 29,956 decisions.</li>
+</ul>
+<p>These minimum counts are not universal requirements for every installation. They answer one specific question: how large must a fixed test be so that, with zero errors, the one-sided upper 95% bound does not exceed the chosen target? If errors occur, the zero-error formula no longer applies.</p>
+<h2>3. What “95%” actually means</h2>
+<p>Confidence describes the long-run coverage of the statistical procedure under repeated sampling and the model assumptions. It is neither a model confidence score nor a guarantee for the next shift. It also does not mean that every individual future inspection decision now has a 95% probability of being correct.</p>
+<p>A two-sided 95% interval allocates the error probability to both tails and produces a different upper bound here. Document the one-sided question in advance when the requirement is an upper limit on an error rate. Do not choose the interval after seeing which version happens to meet the target.</p>
+<h2>4. 300 images do not necessarily represent 300 independent parts</h2>
+<p>Thirty captures of the same part under nearly identical conditions provide different evidence from thirty independently selected parts. Repeated captures can investigate repeatability, but do not automatically increase the independent sample size. A shared batch, tool, surface or acquisition sequence may correlate the errors.</p>
+<p>Define the experimental unit: part, assembly or complete inspection cycle. Keep multiple views of a part together when the production decision is made at part level. Images of the same part should not be randomly spread between training and the final test. The <a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn documentation on grouped evaluation</a> explains why dependent groups need separate treatment. Applying that principle to parts and batches is an engineering recommendation here.</p>
+<h2>5. A practical plan for the 1% example</h2>
+<ol>
+<li><strong>Define the scope:</strong> Which defect types, variants, sizes, surfaces and operating conditions should the claim cover? Confirm reference labels independently of the inspection algorithm.</li>
+<li><strong>Freeze the system:</strong> Version the camera, lens, lighting, software, model, ROI and thresholds. Keep tuning images separate from the final test.</li>
+<li><strong>Write the plan first:</strong> In this example, 299 independently selected defective parts, zero false accepts and a one-sided upper 95% bound no greater than 1%. Good parts need their own false-reject plan.</li>
+<li><strong>Account for the complete test:</strong> Record all planned decisions, acquisition failures and exclusions traceably. Do not make an observed error disappear by restarting the counter.</li>
+<li><strong>Limit the conclusion:</strong> Report counts, bound, system version and covered population. Explicitly leave untested variants unresolved.</li>
+</ol>
+<p>If an error occurs, recalculate using the actual error count. <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html">SciPy binomtest with proportion_ci</a> provides an implementation reference; direction and confidence level must match the question. Repeatedly continuing until the result passes requires a suitable sequential design, rather than reusing the fixed-sample calculation unchanged.</p>
+<h2>6. A large total does not replace coverage</h2>
+<p>Testing 299 clearly visible scratches does not establish a bound for barely visible cracks. An aggregate result concerns the distribution actually examined. If every defect type must meet its own target, each needs an appropriate evaluation. Several individual 95% statements also do not automatically form a joint 95% claim covering every group.</p>
+<p>Disturbance tests and boundary samples complement the statistical plan. They are deliberately selected and must not be treated as a random production sample without justification. Our article on <a href="./robustness-testing-disturbance-factors.html">systematic robustness testing</a> helps plan this coverage; the <a href="./false-accept-false-reject.html">false-accept and false-reject overview</a> explains the different consequences.</p>
+<h2>7. Where RobuTrace fits</h2>
+<p>The inspected development version calculates observed false-accept and false-reject rates from imported, labelled measurement datasets and separates them from simulated projections. The exact confidence bound derived here is an additional analytical method presented in this article; it does not imply an existing automatic RobuTrace acceptance feature. A green local status replaces neither an appropriate sampling plan nor industrial validation.</p>
+<blockquote>A useful result statement is: “0 false accepts among 299 independent defective parts; exact one-sided upper 95% bound approximately 0.997%; applicable to the documented system version and tested defect population.”</blockquote>
+        <section class="article-sources" aria-labelledby="sources">
+          <h2 id="sources">Sources and calculation basis</h2>
+          <ul>
+            <li><a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm">NIST: Binomial Distribution</a></li>
+            <li><a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm">NIST Dataplot: Exact Binomial</a></li>
+            <li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html">SciPy: binomtest</a></li>
+            <li><a href="https://scikit-learn.org/stable/modules/cross_validation.html">scikit-learn: Cross-validation</a></li>
+          </ul>
+          <p class="source-note">Sources checked on 10 October 2026. Numerical examples calculated from the stated equations.</p>
+        </section>
+        <div class="article-cta">
+          <h3>What does your test need to demonstrate?</h3>
+          <p>Discuss your inspection task, error consequences and evidence gaps with us.</p>
+          <a class="button button-light" href="../#contact">Get in touch</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <script src="../../site.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"5776316e28e2464997e30630279623a7"}'></script>
+</body>
+</html>

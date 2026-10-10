@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robutrace.de/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://robutrace.de/en/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://robutrace.de/insights/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://robutrace.de/en/insights/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -62,6 +62,16 @@
   <url>
     <loc>https://robutrace.de/en/insights/camera-resolution-field-of-view-smallest-feature.html</loc>
     <lastmod>2026-09-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://robutrace.de/insights/null-fehler-stichprobengroesse.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://robutrace.de/en/insights/zero-errors-validation-sample-size.html</loc>
+    <lastmod>2026-10-10</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>
