@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#061b36"/>
+  <path d="M820 0v630M940 0v630M1060 0v630M0 150h1200M0 300h1200M0 450h1200" stroke="#153c5b" stroke-width="1"/>
+  <rect x="64" y="62" width="8" height="43" rx="4" fill="#75d3f5"/>
+  <text x="90" y="96" fill="#fff" font-family="Arial,sans-serif" font-size="38" font-weight="bold">RobuTrace</text>
+  <text x="64" y="206" fill="#95d7ee" font-family="Arial,sans-serif" font-size="21" letter-spacing="2">SIMULATION-ASSISTED VISION ENGINEERING</text>
+  <text x="64" y="300" fill="#fff" font-family="Arial,sans-serif" font-size="68" font-weight="bold">Develop machine vision.</text>
+  <text x="64" y="382" fill="#75d3f5" font-family="Arial,sans-serif" font-size="68" font-weight="bold">Start virtually.</text>
+  <text x="64" y="474" fill="#cfdfeb" font-family="Arial,sans-serif" font-size="27">Camera + Optics + Lighting + Software</text>
+  <text x="64" y="566" fill="#aac5d7" font-family="Arial,sans-serif" font-size="21">Engineering prototype · In development</text>
+  <text x="950" y="566" fill="#fff" font-family="Arial,sans-serif" font-size="23">robutrace.de</text>
+</svg>

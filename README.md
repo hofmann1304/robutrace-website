@@ -5,10 +5,23 @@ jedem Static-Hosting-Anbieter veroeffentlicht werden.
 
 ## Aktueller Stand
 
-Die Startseite wurde am 5. August 2026 auf den Stand des RobuTrace
-Engineering-Prototyps aktualisiert. Sie zeigt nun den fuenfstufigen Workflow von der
-Inspektionsaufgabe bis zur technischen Freigabe und benennt die Grenzen des aktuellen
-Prototyps ausdruecklich.
+Die Startseite wurde am 29. Oktober 2026 auf die Produktdefinition vom 28. Oktober
+ausgerichtet: simulationsgestützte Entwicklung und gemeinsame Auswahl von Kamera,
+Optik, Licht und Software-Pipeline. Die gekoppelte Szenario-/Bildsimulation wird als
+Entwicklungsziel ausgewiesen. Vorhandene Funktionen, geplanter Ausbau und das Angebot
+eines bezahlten Entwicklungspiloten sind getrennt beschrieben.
+
+Beide Sprachfassungen nutzen dieselbe Struktur: Ansatz, illustrativer Prüffall,
+aktueller Stand, Pilotablauf, FAQ, Gründerin, Fachwissen und Kontakt. Die Startseiten-
+Gestaltung liegt zusätzlich in homepage.css; Artikel und Rechtsseiten behalten ihre
+gemeinsamen Stile. Das Logo wird unverändert verwendet.
+
+Technische Prüfung: node scripts/check-site.cjs. Für die Browserprüfung zusätzlich
+Playwright verfügbar machen (ggf. NODE_PATH setzen), dann node scripts/check-ui.cjs.
+Die Browserprüfung nutzt lokale Dateien, blockiert externe Anfragen und sendet kein Formular.
+Suchbegriffe sind redaktionell aus dem Anwendungsfall abgeleitet, keine gemessenen
+Suchvolumina. Google-Indexierung und Analytics-Eingang sind separat im jeweiligen
+authentifizierten Dashboard zu prüfen; die Website allein belegt beides nicht.
 
 Seit dem 31. August 2026 ist die Website vollstaendig zweisprachig. Die englischen Seiten
 liegen unter `en/`; jede indexierbare deutsche Seite verweist per `hreflang` auf ihre englische
