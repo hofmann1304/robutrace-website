@@ -6,7 +6,7 @@ const os = require('node:os');
 const { chromium } = require('playwright');
 const root = path.resolve(__dirname, '..');
 const output = fs.mkdtempSync(path.join(os.tmpdir(), 'robutrace-website-qa-'));
-const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.webp': 'image/webp' };
+const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml' };
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
   let file = path.resolve(root, '.' + decodeURIComponent(url.pathname));
@@ -30,7 +30,11 @@ const server = http.createServer((req, res) => {
       await page.goto(`${origin}/${lang === 'en' ? 'en/' : ''}`, { waitUntil: 'networkidle' });
       assert(await page.locator('h1').isVisible());
       assert(await page.locator('.home-concept-note').isVisible());
+      assert(await page.locator('.home-state').isVisible());
+      assert.equal(await page.locator('.contact-disclosure').getAttribute('open'), null);
+      await page.locator('.home-technical summary').click();
       assert(await page.locator('.home-future').isVisible());
+      await page.locator('.home-technical summary').click();
       const overflow = await page.evaluate(() => [...document.querySelectorAll('main *, header *, footer *')].filter((el) => { const rect = el.getBoundingClientRect(); return rect.width && rect.right > innerWidth + 1; }).map((el) => `${el.tagName}.${el.className}`).slice(0, 12));
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), `${lang} ${width}: horizontal overflow ${overflow.join(', ')}`);
       if (width <= 900) {
@@ -41,11 +45,13 @@ const server = http.createServer((req, res) => {
         assert.equal(await toggle.getAttribute('aria-expanded'), 'false');
         assert.equal(await page.locator('body').evaluate((el) => el.classList.contains('menu-open')), false);
       }
-      await page.locator('.home-faq summary').first().click();
-      assert.equal(await page.locator('.home-faq details').first().getAttribute('open'), '');
+      await page.locator('.home-disclosures details').last().locator('summary').click();
+      assert.equal(await page.locator('.home-disclosures details').last().getAttribute('open'), '');
       const contact = lang === 'de' ? 'kontakt' : 'contact';
       await page.locator(`.home-hero .button[href="#${contact}"]`).click();
       assert.equal(new URL(page.url()).hash, `#${contact}`);
+      assert.equal(await page.locator('.contact-disclosure').getAttribute('open'), '');
+      await page.waitForFunction(() => document.activeElement?.id === 'contact-name');
       assert.equal(await page.locator('form').evaluate((form) => form.checkValidity()), false);
       assert.equal(await page.locator('form').getAttribute('action'), 'https://form.taxi/s/ak62xooj');
       if (width <= 900) await page.locator('[data-menu-toggle]').click();
@@ -58,7 +64,7 @@ const server = http.createServer((req, res) => {
       await page.screenshot({ path: path.join(output, `${lang}-${width}.png`), fullPage: true });
       assert.deepEqual(errors, []); assert.deepEqual(broken, []);
       await page.close();
-      console.log(`PASS ${lang} ${width}px: layout, menu, FAQ, contact, validation, language switch, no missing resources or runtime errors.`);
+      console.log(`PASS ${lang} ${width}px: layout, menu, disclosures, contact opening/focus, validation, language switch, no missing resources or runtime errors.`);
     }
     console.log(`Screenshots: ${output}`);
   } finally { await browser.close(); server.close(); }

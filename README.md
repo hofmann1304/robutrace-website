@@ -11,10 +11,13 @@ Optik, Licht und Software-Pipeline. Die gekoppelte Szenario-/Bildsimulation wird
 Entwicklungsziel ausgewiesen. Vorhandene Funktionen, geplanter Ausbau und das Angebot
 eines bezahlten Entwicklungspiloten sind getrennt beschrieben.
 
-Beide Sprachfassungen nutzen dieselbe Struktur: Ansatz, illustrativer Prüffall,
-aktueller Stand, Pilotablauf, FAQ, Gründerin, Fachwissen und Kontakt. Die Startseiten-
-Gestaltung liegt zusätzlich in homepage.css; Artikel und Rechtsseiten behalten ihre
-gemeinsamen Stile. Das Logo wird unverändert verwendet.
+Beide Sprachfassungen nutzen eine kompakte Struktur: Produkt, Pilot, Kontakt,
+Gründerin und Fachwissen. Funktionsumfang und Beispiel sind aufklappbar. Der
+Entwicklungsstand bleibt bereits in der geschlossenen Ansicht sichtbar. Kontaktlinks
+öffnen das bestehende Formular und fokussieren das Namensfeld; ohne JavaScript lässt
+es sich über die native Aufklappfunktion öffnen. Die Startseiten-Gestaltung liegt in
+homepage.css, die Kontaktbedienung in homepage.js. Artikel und Rechtsseiten behalten
+ihre gemeinsamen Stile. Das Logo wird unverändert verwendet.
 
 Technische Prüfung: node scripts/check-site.cjs. Für die Browserprüfung zusätzlich
 Playwright verfügbar machen (ggf. NODE_PATH setzen), dann node scripts/check-ui.cjs.
