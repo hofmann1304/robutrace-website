@@ -18,7 +18,7 @@
     <link rel="icon" href="./assets/robutrace-icon-transparent.png" type="image/png" />
     <link rel="preload" href="./assets/robutrace-logo-transparent.png?v=20260823" as="image" />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./homepage.css?v=20261029" />
+    <link rel="stylesheet" href="./homepage.css?v=20261029b" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
@@ -119,17 +119,16 @@
         </button>
 
         <nav class="main-nav" id="main-navigation" aria-label="Hauptnavigation" data-navigation>
-          <a href="#produkt">Ansatz</a>
-          <a href="#beispiel">Beispiel</a>
+          <a href="#produkt">Produkt</a>
           <a href="#pilot">Pilot</a>
-          <a href="./insights/">Fachwissen</a>
+          <a href="#ueber-uns">Über RobuTrace</a>
           <div class="language-switcher">
             <span class="sr-only">Sprache wählen:</span>
             <a href="./" lang="de" aria-current="page">DE</a>
             <span aria-hidden="true">/</span>
             <a href="./en/" lang="en">EN</a>
           </div>
-          <a class="button button-small" href="#kontakt">Prüfaufgabe besprechen</a>
+          <a class="button button-small" href="#kontakt">Pilot besprechen</a>
         </nav>
       </div>
     </header>
@@ -137,163 +136,40 @@
       <section class="home-hero">
         <div class="container home-hero-grid">
           <div class="home-hero-copy">
-            <p class="home-status"><span aria-hidden="true"></span>Engineering-Prototyp · Entwicklungspartner gesucht</p>
-            <p class="eyebrow">Simulationsgestütztes Vision Engineering</p>
-            <h1>Bildverarbeitung<br /><span>virtuell entwickeln.</span></h1>
-            <p class="home-lead">Welche Kamera, welches Licht, welcher Algorithmus? Wir entwickeln RobuTrace, damit Sie Systemvarianten vor dem physischen Aufbau gemeinsam untersuchen können.</p>
-            <div class="hero-actions"><a class="button" href="#kontakt">Prüfaufgabe besprechen</a><a class="text-link" href="#produkt">So ist der Ansatz <span aria-hidden="true">→</span></a></div>
+            <p class="home-status">Engineering-Software in Entwicklung</p>
+            <h1>Bildverarbeitung.<br /><span>Virtuell entwickeln.</span></h1>
+            <p class="home-lead">Kamera, Optik, Licht und Software gemeinsam auslegen. RobuTrace soll Systemvarianten vergleichbar machen, bevor der physische Aufbau entsteht.</p>
+            <div class="hero-actions"><a class="button" href="#kontakt">Pilot besprechen<span aria-hidden="true">↗</span></a><a class="text-link" href="#produkt">Produkt kennenlernen</a></div>
             <p class="home-audience" id="zielgruppen">Für Maschinenbauer und Bildverarbeitungsintegratoren</p>
           </div>
-          <div class="home-concept">
-            <p class="home-concept-label">So soll RobuTrace unterstützen</p>
-            <h2>Eine Prüfaufgabe. Das Zusammenspiel verstehen.</h2>
-            <ol class="concept-flow">
-<li><span class="concept-number" aria-hidden="true">01</span><div><strong>Szenario</strong><p>Bauteil · Defekt · Aufnahmebedingungen</p></div></li>
-<li><span class="concept-number" aria-hidden="true">02</span><div><strong>Systemvarianten</strong><p>Kamera + Optik + Licht + Pipeline</p></div></li>
-<li><span class="concept-number" aria-hidden="true">03</span><div><strong>Entscheidungsgrundlage</strong><p>Variantenvergleich + reale Gegenprüfung</p></div></li>
-            </ol>
-            <p class="home-concept-note">Konzeptdarstellung · gekoppelte Szenario- und Bildsimulation in Entwicklung</p>
-          </div>
+          <figure class="home-illustration">
+            <img src="./assets/vision-system-concept.svg" width="600" height="430" alt="Schematischer Aufbau: Kamera und Optik über einem Bauteil, Beleuchtung und Software-Pipeline." />
+            <figcaption class="home-concept-note">Konzeptdarstellung · gekoppelte Bildsimulation in Entwicklung</figcaption>
+          </figure>
         </div>
-        <div class="container home-intent"><p>Unser Ziel: weniger Versuchsaufbauten, fundiertere Auswahl und geringerer Entwicklungsaufwand. Den tatsächlichen Nutzen prüfen wir im Pilot.</p><a href="#stand">Was heute schon funktioniert <span aria-hidden="true">↗</span></a></div>
       </section>
-      <section class="home-section" id="produkt">
+      <section class="home-product home-section" id="produkt">
         <div class="container">
-          <div class="home-intro"><p class="eyebrow">Vom Prüfproblem zur Systementscheidung</p><h2>Früher vergleichen.<br />Gezielter aufbauen.</h2><p>Die Eignung einer Bildverarbeitung entsteht im Zusammenspiel von Bauteil, Aufnahme und Auswertung. RobuTrace soll diese Zusammenhänge früher untersuchbar machen – bevor eine ungeeignete Kombination zu Einkauf, Umbau und neuen Versuchen führt.</p></div>
-          <div class="home-three" id="vorgehen"><article class="home-step"><span class="home-number">01</span><h3>Prüfaufgabe beschreiben</h3><p>Merkmal, Sichtfeld, Takt und Aufnahmebedingungen festlegen. Fehlende Angaben und Annahmen sichtbar machen.</p></article>
-<article class="home-step"><span class="home-number">02</span><h3>Systemvarianten untersuchen</h3><p>Kamera, Optik, Beleuchtung und Pipeline gemeinsam betrachten. Heute mit technischer Vorauswahl; künftig auf gekoppelten virtuellen Prüfszenarien.</p></article>
-<article class="home-step"><span class="home-number">03</span><h3>Auswahl real gegenprüfen</h3><p>Aussichtsreiche Varianten mit realen Aufnahmen prüfen. Ergebnisse und Grenzen dokumentieren und das Szenariomodell daran verbessern.</p></article></div>
-        </div>
-      </section>
-      <section class="home-section home-example" id="beispiel">
-        <div class="container">
-          <div class="home-split"><div><p class="eyebrow">Ein Beispiel macht es greifbar</p><h2>Eine Lasche erkennen.<br />Aber unter welchen Bedingungen?</h2></div><p>Illustrative Prüfaufgabe, kein Kundenprojekt: An einem Bauteil soll eine fehlende Lasche erkannt werden. Welche Bildkette und Auswertung sind dafür geeignet?</p></div>
-          <div class="home-three"><article class="home-example-card"><span class="home-number">01</span><h3>Die Aufgabe</h3><p>Bauteillage, kleinste relevante Merkmalsbreite, Sichtfeld und verfügbarer Bauraum müssen zusammenpassen.</p></article>
-<article class="home-example-card"><span class="home-number">02</span><h3>Die Varianten</h3><p>Andere Kameraauflösung, Objektiv und Lichtanordnung verändern die Bildaufnahme. Die Software-Pipeline muss das Merkmal daraus zuverlässig auswerten können.</p></article>
-<article class="home-example-card"><span class="home-number">03</span><h3>Die Entscheidung</h3><p>Welche Kombination wird am realen Aufbau weiterverfolgt? Welche Annahmen und Grenzfälle sind zuerst zu prüfen?</p></article></div>
-          <p class="home-example-note">Zielbild: dieselbe Aufgabe mit mehreren Hardware- und Pipelinevarianten virtuell vergleichen. Die dafür nötige gekoppelte Bildsimulation ist noch nicht implementiert.</p>
-          <a class="text-link" href="./insights/kameraaufloesung-sichtfeld-mindestmerkmal.html">Wie Sichtfeld und Kameraauflösung zusammenhängen <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
-      <section class="home-section" id="stand">
-        <div class="container">
-          <div class="home-intro"><p class="eyebrow">Was heute möglich ist</p><h2>Ein Prototyp als Grundlage.<br />Ein klarer nächster Schritt.</h2><p>Wir unterscheiden zwischen vorhandenen Funktionen und dem Produktziel. So lässt sich ein Entwicklungspilot realistisch abgrenzen.</p></div>
-          <div class="home-status-grid">
-            <div class="home-capability"><span class="home-tag">Vorhanden</span><h3>Heute im Engineering-Prototyp</h3><ul><li>Prüfaufgaben und technische Eckdaten strukturiert erfassen</li><li>Kamera- und Hardwarekandidaten anhand von Herstellerdaten und technischen Grenzen vorauswählen</li><li>Pipeline-Entwürfe und regelbasierte Variantenbewertungen erstellen</li><li>Originalbilder verwalten und einfache Helligkeits-/Flächenprüfungen lokal ausführen</li><li>Schwellen-Parametersensitivität untersuchen, Messdaten auswerten und Projektberichte exportieren</li></ul></div>
-            <div class="home-capability home-future"><span class="home-tag">In Entwicklung</span><h3>Nächster Entwicklungsschritt</h3><ul><li>Prüfszenario und virtuelle Bildentstehung koppeln</li><li>Hardwarevarianten und ausführbare Pipelines am selben Szenario vergleichen</li><li>Modellvorhersagen anhand realer Aufnahmen überprüfen</li></ul><p>Eine validierte physikalische Bildsimulation, vollständige Variantenprüfung und industrielle Vorhersagegüte sind noch nicht vorhanden. Der lokale Bildpilot ist keine industrielle Freigabe. Validierung und Rückverfolgbarkeit bleiben ergänzende Funktionen.</p></div>
+          <div class="home-section-head"><div><p class="eyebrow">Das Produkt</p><h2>Das ganze System.<br />Eine gemeinsame Grundlage.</h2></div><p>Welche Kombination eignet sich für Ihre Prüfaufgabe? RobuTrace verbindet technische Anforderungen, Hardware-Vorauswahl und Pipeline-Entwürfe. Ziel ist, reale Versuche auf aussichtsreiche Varianten zu konzentrieren.</p></div>
+          <ol class="home-process" id="vorgehen"><li><span class="home-number">01</span><div><h3>Prüfaufgabe</h3><p>Merkmal und Aufnahmebedingungen festlegen.</p></div></li><li><span class="home-number">02</span><div><h3>Systemvarianten</h3><p>Hardware und Software gemeinsam betrachten.</p></div></li><li><span class="home-number">03</span><div><h3>Realer Abgleich</h3><p>Annahmen mit realen Aufnahmen überprüfen.</p></div></li></ol>
+          <p class="home-state" id="stand">Heute: Engineering-Prototyp mit Hardware-Vorauswahl, lokaler Bildprüfung und Berichten. Nächster Schritt: gekoppelte Szenario- und Bildsimulation.</p>
+          <div class="home-disclosures">
+            <details class="home-technical"><summary>Funktionsumfang und Entwicklungsstand</summary><div class="home-status-grid"><div class="home-capability"><span class="home-tag">Vorhanden</span><h3>Heute im Engineering-Prototyp</h3><ul><li>Prüfaufgaben und technische Eckdaten strukturiert erfassen</li><li>Kamera- und Hardwarekandidaten anhand von Herstellerdaten und technischen Grenzen vorauswählen</li><li>Pipeline-Entwürfe und regelbasierte Variantenbewertungen erstellen</li><li>Originalbilder verwalten und einfache Helligkeits-/Flächenprüfungen lokal ausführen</li><li>Schwellen-Parametersensitivität untersuchen, Messdaten auswerten und Projektberichte exportieren</li></ul></div><div class="home-capability home-future"><span class="home-tag">In Entwicklung</span><h3>Nächster Entwicklungsschritt</h3><ul><li>Prüfszenario und virtuelle Bildentstehung koppeln</li><li>Hardwarevarianten und ausführbare Pipelines am selben Szenario vergleichen</li><li>Modellvorhersagen anhand realer Aufnahmen überprüfen</li></ul><p>Eine validierte physikalische Bildsimulation, vollständige Variantenprüfung und industrielle Vorhersagegüte sind noch nicht vorhanden. Der lokale Bildpilot ist keine industrielle Freigabe. Validierung und Rückverfolgbarkeit bleiben ergänzende Funktionen.</p></div></div></details>
+            <details id="beispiel"><summary>Beispiel: Eine fehlende Lasche erkennen</summary><div class="home-detail-content"><p>Wie ändern Kameraauflösung, Licht und Auswertung die Erkennbarkeit einer Lasche? Dieses illustrative Beispiel beschreibt den geplanten Variantenvergleich. Es ist kein Kundenprojekt und kein Simulationsergebnis.</p><a href="./insights/kameraaufloesung-sichtfeld-mindestmerkmal.html">Kameraauflösung und Sichtfeld verstehen <span aria-hidden="true">↗</span></a></div></details>
           </div>
         </div>
       </section>
-      <section class="home-section home-pilot" id="pilot">
-        <div class="container">
-          <div class="home-intro"><p class="eyebrow">Mit einem konkreten Anwendungsfall starten</p><h2>Vom Erstgespräch zum<br />abgegrenzten Entwicklungspilot.</h2><p>Für Entwicklungsteams im Maschinenbau und in der Bildverarbeitungsintegration, die eine Prüfaufgabe frühzeitig auslegen möchten. Besonders geeignet ist ein klar abgrenzbarer 2D-Anwendungsfall mit Zugang zu Bauteil- und Aufnahmedaten.</p></div>
-          <div class="home-three"><article class="home-step"><span class="home-number">01</span><h3>Erstgespräch</h3><p>Wir klären Ihre Prüfaufgabe, den heutigen Entwicklungsprozess und ob ein gemeinsamer Pilot sinnvoll ist.</p></article>
-<article class="home-step"><span class="home-number">02</span><h3>Pilotumfang vereinbaren</h3><p>Prüffall, verfügbare Daten, Entwicklungsumfang, Erfolgskriterien und Vergütung werden vor Projektstart festgelegt.</p></article>
-<article class="home-step"><span class="home-number">03</span><h3>Entwickeln und gegenprüfen</h3><p>Im vereinbarten Umfang Modelle und Varianten untersuchen und an realen Aufnahmen gegenprüfen. Ergebnis: dokumentierte Erkenntnisse, Grenzen und nächste Schritte.</p></article></div>
-          <div class="home-pilot-action"><p>Einstieg über einen bezahlten Entwicklungspilot. Für wiederkehrende Projekte ist später eine jährliche Teamlizenz geplant. Preis und Umfang werden individuell vereinbart.</p><a class="button" href="#kontakt">Prüfaufgabe besprechen</a></div>
+      <section class="home-pilot home-section" id="pilot">
+        <div class="container home-pilot-grid">
+          <div><p class="eyebrow">Zusammenarbeit</p><h2>Ein konkreter Prüffall.<br />Ein klarer Pilot.</h2><p>Wir suchen Entwicklungspartner mit einer abgegrenzten 2D-Prüfaufgabe und Zugang zu Bauteil- und Aufnahmedaten.</p><p class="home-pilot-note">Bezahlter Entwicklungspilot. Später ist eine jährliche Teamlizenz geplant. Zeit- und Kostenvorteile werden im Pilot überprüft.</p></div>
+          <ol class="pilot-list"><li><span>01</span><div><h3>Aufgabe klären</h3><p>Prüfproblem, Daten und Eignung gemeinsam besprechen.</p></div></li><li><span>02</span><div><h3>Umfang vereinbaren</h3><p>Ergebnis, Erfolgskriterien und Vergütung vorab festlegen.</p></div></li><li><span>03</span><div><h3>Entwickeln & prüfen</h3><p>Modelle und Varianten untersuchen, real gegenprüfen und Erkenntnisse dokumentieren.</p></div></li></ol>
         </div>
       </section>
-      <section class="home-section home-faq">
-        <div class="container home-faq-grid"><h2>Vor dem ersten Gespräch</h2><div><details><summary>Kann ich RobuTrace bereits als fertige Simulationssoftware kaufen?</summary><p>Es gibt einen Engineering-Prototyp. Die gekoppelte Szenario- und Bildsimulation ist in Entwicklung. Aktuell suchen wir passende Entwicklungspartner für einen abgegrenzten Pilot.</p></details>
-<details><summary>Ersetzt RobuTrace HALCON oder OpenCV?</summary><p>RobuTrace soll die gemeinsame Systemauslegung unterstützen und bestehende Vision-Workflows ergänzen. Produktive Herstelleradapter und eine durchgängige Ausführung beliebiger Pipelines sind noch nicht vorhanden.</p></details>
-<details><summary>Was benötigen Sie für ein Erstgespräch?</summary><p>Eine kurze Beschreibung des Bauteils, Prüfmerkmals und heutigen Problems genügt. Freigegebene Beispielbilder und technische Eckdaten können später helfen. Vertrauliche Daten bitte erst nach persönlicher Abstimmung senden.</p></details>
-<details><summary>Bleiben meine Bilder lokal?</summary><p>Der aktuelle Prototyp verarbeitet den Originalbild-Pilot lokal. Eine optionale KI-Analyse überträgt ausdrücklich bestätigte Inhalte an einen externen Dienst. Datenzugang, Vertraulichkeit und Verarbeitung im Entwicklungspilot werden vorab vereinbart.</p></details></div></div>
-      </section>
-      <section class="section founder-section" id="ueber-uns">
-        <div class="container founder-layout">
-          <div class="founder-photo reveal">
-            <img
-              src="./assets/sara-hofmann-portrait.webp"
-              alt="Porträt von Sara Hofmann, Gründerin und Entwicklerin von RobuTrace"
-              width="960"
-              height="1200"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-          <div class="founder-copy">
-            <p class="eyebrow">Über RobuTrace</p>
-            <h2>Eine bessere Grundlage<br />für Vision-Entscheidungen.</h2>
-            <p class="founder-lead">Ich bin Sara Hofmann und entwickle RobuTrace. Mein Ziel ist, industrielle Bildverarbeitung früher als Gesamtsystem zu untersuchen – von Kamera und Beleuchtung bis zum Algorithmus.</p>
-            <p>
-              Erfahrungen in Softwareentwicklung, optischer Systemauslegung und Systems
-              Engineering fließen in ein Werkzeug ein, das technische Tiefe mit klarer
-              Engineering-Struktur verbindet.
-            </p>
-            <a class="text-link" href="https://sarahofmann.de/uebermich">
-              Mehr über Sara Hofmann
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="section insights-preview">
-        <div class="container">
-          <div class="section-intro section-intro-row">
-            <div>
-              <p class="eyebrow">RobuTrace Insights</p>
-              <h2>Wissen für besseres Vision Engineering</h2>
-            </div>
-            <a class="text-link" href="./insights/">
-              Alle Beiträge
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-          <div class="article-grid">
-            <article class="article-card reveal">
-              <a href="./insights/null-fehler-stichprobengroesse.html">
-                <div class="article-visual visual-b"><span>Validierung</span></div>
-                <div class="article-body">
-                  <span class="article-meta">10. Oktober 2026</span>
-                  <h3>Null Fehler im Test: Wie viele Prüfteile braucht ein belastbarer Nachweis?</h3>
-                  <p>Stichproben planen, Konfidenzgrenzen berechnen und unabhängige Prüfteile richtig zählen.</p>
-                </div>
-              </a>
-            </article>
-            <article class="article-card reveal">
-              <a href="./insights/kameraaufloesung-sichtfeld-mindestmerkmal.html">
-                <div class="article-visual visual-d">
-                  <span>Systemauslegung</span>
-                </div>
-                <div class="article-body">
-                  <span class="article-meta">Auslegung · 11 Min.</span>
-                  <h3>Kameraauflösung aus Sichtfeld und kleinstem Merkmal berechnen</h3>
-                  <p>Mit nachvollziehbarer Rechnung, Optikgrenzen und einem konkreten Beispiel.</p>
-                </div>
-              </a>
-            </article>
-            <article class="article-card reveal">
-              <a href="./insights/produktionsreife-vision-systeme.html">
-                <div class="article-visual visual-a">
-                  <span>Robustheit</span>
-                  <div class="scan-line"></div>
-                </div>
-                <div class="article-body">
-                  <span class="article-meta">Engineering · 8 Min.</span>
-                  <h3>Warum gute Laborergebnisse noch keine Produktionsreife beweisen</h3>
-                  <p>
-                    Fünf typische Lücken zwischen Demo, Pilotanlage und belastbarer
-                    Serienfreigabe.
-                  </p>
-                </div>
-              </a>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="contact-section" id="kontakt">
-        <div class="contact-grid" aria-hidden="true"></div>
+      <section class="contact-section home-section" id="kontakt">
         <div class="container contact-layout">
-          <div class="contact-intro">
-            <p class="eyebrow">Der nächste Schritt</p>
-            <h2>Welche Prüfaufgabe<br />beschäftigt Sie?</h2>
-            <p>Beschreiben Sie kurz Ihr Bauteil, das Prüfmerkmal und die aktuelle Herausforderung. Im Erstgespräch klären wir die Ausgangslage und einen möglichen nächsten Schritt. Eine Pilotbeauftragung erfolgt separat.</p>
-            <p class="contact-direct">
-              Sie möchten lieber direkt schreiben?
-              <a href="mailto:info@robutrace.de">info@robutrace.de</a>
-            </p>
-          </div>
-          <form
+          <div class="contact-intro"><p class="eyebrow">Kontakt</p><h2>Sprechen wir über<br />Ihre Prüfaufgabe.</h2><p>Eine kurze Beschreibung von Bauteil, Prüfmerkmal und Herausforderung genügt für den Einstieg. Eine Beauftragung vereinbaren wir separat.</p><a class="home-email" href="mailto:info@robutrace.de">info@robutrace.de</a></div>
+          <details class="contact-disclosure"><summary>Kontaktformular öffnen<span aria-hidden="true">+</span></summary>
+<form
             class="contact-form"
             id="kontaktformular"
             action="https://form.taxi/s/ak62xooj"
@@ -392,7 +268,28 @@
               Bitte senden Sie vertrauliche Beispielbilder erst nach persönlicher Rücksprache.
             </p>
           </form>
+          </details>
         </div>
+      </section>
+      <section class="founder-section home-section" id="ueber-uns">
+        <div class="container founder-layout">
+<div class="founder-photo">
+            <img
+              src="./assets/sara-hofmann-portrait.webp"
+              alt="Porträt von Sara Hofmann, Gründerin und Entwicklerin von RobuTrace"
+              width="960"
+              height="1200"
+              loading="eager"
+              decoding="sync"
+            />
+          </div>
+          <div class="founder-copy"><p class="eyebrow">Über RobuTrace</p><h2>Entwickelt von Sara Hofmann.</h2><p>Softwareentwicklung, optische Systemauslegung und Systems Engineering bilden die Grundlage von RobuTrace. Mein Ziel: bessere technische Entscheidungen früher in der Entwicklung.</p><a class="text-link" href="https://sarahofmann.de/uebermich">Mehr über Sara Hofmann <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+      <section class="home-insights">
+        <div class="container home-insight-grid"><div><h2>Fachwissen für Ihre Auslegung</h2><a class="text-link" href="./insights/">Alle Fachbeiträge <span aria-hidden="true">↗</span></a></div><div class="home-article-links"><a href="./insights/null-fehler-stichprobengroesse.html"><span>Null Fehler im Test: Wie viele Prüfteile braucht ein belastbarer Nachweis?</span><span aria-hidden="true">↗</span></a>
+<a href="./insights/kameraaufloesung-sichtfeld-mindestmerkmal.html"><span>Kameraauflösung aus Sichtfeld und kleinstem Merkmal berechnen</span><span aria-hidden="true">↗</span></a>
+<a href="./insights/produktionsreife-vision-systeme.html"><span>Warum gute Laborergebnisse noch keine Produktionsreife beweisen</span><span aria-hidden="true">↗</span></a></div></div>
       </section>
     </main>
     <footer class="site-footer">
@@ -429,6 +326,7 @@
     </footer>
 
     <script src="./site.js"></script>
+    <script src="./homepage.js?v=20261029b"></script>
     <!-- Cloudflare Web Analytics -->
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"5776316e28e2464997e30630279623a7"}'></script>
     <!-- End Cloudflare Web Analytics -->
