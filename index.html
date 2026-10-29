@@ -3,14 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RobuTrace | Vision Engineering &amp; Validation</title>
+    <title>Industrielle Bildverarbeitung virtuell entwickeln | RobuTrace</title>
     <meta
       name="description"
-      content="RobuTrace verbindet Systementwurf, Robustheitstests, Messdaten und technische Freigaben für industrielle Bildverarbeitung in einem nachvollziehbaren Engineering-Workflow."
-    />
-    <meta
-      name="keywords"
-      content="Industrial Vision Engineering, industrielle Bildverarbeitung, Machine Vision, Robustheit, Validierung, Sensitivitätsanalyse, Knowledge Graph, Traceability, Vision-Systeme"
+      content="RobuTrace entwickelt simulationsgestütztes Vision Engineering: Kamera, Optik, Licht und Software gemeinsam auslegen. Engineering-Prototyp kennenlernen und Pilot besprechen."
     />
     <meta name="author" content="RobuTrace" />
     <meta name="robots" content="index, follow" />
@@ -22,60 +18,87 @@
     <link rel="icon" href="./assets/robutrace-icon-transparent.png" type="image/png" />
     <link rel="preload" href="./assets/robutrace-logo-transparent.png?v=20260823" as="image" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./homepage.css?v=20261029" />
 
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="RobuTrace" />
-    <meta property="og:title" content="RobuTrace | Vision Engineering &amp; Validation" />
+    <meta property="og:title" content="Industrielle Bildverarbeitung virtuell entwickeln | RobuTrace" />
     <meta
       property="og:description"
-      content="Systementwurf, Robustheitstests, Messdaten und technische Freigaben in einem nachvollziehbaren Engineering-Workflow."
+      content="RobuTrace entwickelt simulationsgestütztes Vision Engineering: Kamera, Optik, Licht und Software gemeinsam auslegen. Engineering-Prototyp kennenlernen und Pilot besprechen."
     />
     <meta property="og:url" content="https://robutrace.de/" />
-    <meta property="og:image" content="https://robutrace.de/assets/robutrace-social-cover.png" />
-    <meta property="og:image:width" content="4200" />
-    <meta property="og:image:height" content="700" />
+    <meta property="og:image" content="https://robutrace.de/assets/virtual-development-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="Unverändertes RobuTrace Logo mit dem Zusatz Industrial Vision Engineering"
+      content="RobuTrace: simulationsgestützte Entwicklung von Kamera, Optik, Licht und Software. Engineering-Prototyp in Entwicklung."
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="RobuTrace | Vision Engineering &amp; Validation" />
+    <meta name="twitter:title" content="Industrielle Bildverarbeitung virtuell entwickeln | RobuTrace" />
     <meta
       name="twitter:description"
-      content="Systementwurf, Robustheitstests, Messdaten und technische Freigaben in einem nachvollziehbaren Engineering-Workflow."
+      content="RobuTrace entwickelt simulationsgestütztes Vision Engineering: Kamera, Optik, Licht und Software gemeinsam auslegen. Engineering-Prototyp kennenlernen und Pilot besprechen."
     />
     <meta
       name="twitter:image"
-      content="https://robutrace.de/assets/robutrace-social-cover.png"
+      content="https://robutrace.de/assets/virtual-development-cover.png"
     />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "RobuTrace",
-        "url": "https://robutrace.de/",
-        "logo": "https://robutrace.de/assets/robutrace-logo-transparent.png",
-        "description": "Engineering-Prototyp für Systementwurf, Robustheitsanalyse, Validierung und nachvollziehbare Freigaben industrieller Bildverarbeitungssysteme.",
-        "founder": {
-          "@type": "Person",
-          "name": "Sara Hofmann"
-        }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://robutrace.de/#organization",
+      "name": "RobuTrace",
+      "url": "https://robutrace.de/",
+      "logo": "https://robutrace.de/assets/robutrace-logo-transparent.png",
+      "description": "Simulationsgestützte Entwicklung industrieller Bildverarbeitung. Engineering-Prototyp in Entwicklung.",
+      "founder": {
+        "@type": "Person",
+        "name": "Sara Hofmann",
+        "url": "https://sarahofmann.de"
       }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://robutrace.de/#website",
+      "name": "RobuTrace",
+      "url": "https://robutrace.de/",
+      "inLanguage": [
+        "de",
+        "en"
+      ],
+      "publisher": {
+        "@id": "https://robutrace.de/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://robutrace.de/#webpage",
+      "url": "https://robutrace.de/",
+      "name": "Industrielle Bildverarbeitung virtuell entwickeln | RobuTrace",
+      "description": "RobuTrace entwickelt simulationsgestütztes Vision Engineering: Kamera, Optik, Licht und Software gemeinsam auslegen. Engineering-Prototyp kennenlernen und Pilot besprechen.",
+      "inLanguage": "de",
+      "isPartOf": {
+        "@id": "https://robutrace.de/#website"
+      },
+      "about": {
+        "@id": "https://robutrace.de/#organization"
+      },
+      "dateModified": "2026-10-29"
+    }
+  ]
+}
     </script>
   </head>
-  <body>
+
+  <body class="home">
     <a class="skip-link" href="#main">Zum Inhalt springen</a>
-
-    <div class="announcement">
-      <div class="container announcement-inner">
-        <span class="announcement-dot" aria-hidden="true"></span>
-        <span>Der RobuTrace Prototyp ist bereit für reale Pilot-Use-Cases.</span>
-        <a href="#kontakt">Als Pilotanwender anfragen</a>
-      </div>
-    </div>
-
     <header class="site-header" data-header>
       <div class="container header-inner">
         <a class="brand" href="./" aria-label="RobuTrace Startseite">
@@ -96,313 +119,86 @@
         </button>
 
         <nav class="main-nav" id="main-navigation" aria-label="Hauptnavigation" data-navigation>
-          <a href="#produkt">Produkt</a>
-          <a href="#vorgehen">Vorgehen</a>
-          <a href="#zielgruppen">Für wen</a>
-          <a href="./insights/">Insights</a>
-          <a href="#ueber-uns">Über RobuTrace</a>
+          <a href="#produkt">Ansatz</a>
+          <a href="#beispiel">Beispiel</a>
+          <a href="#pilot">Pilot</a>
+          <a href="./insights/">Fachwissen</a>
           <div class="language-switcher">
             <span class="sr-only">Sprache wählen:</span>
             <a href="./" lang="de" aria-current="page">DE</a>
             <span aria-hidden="true">/</span>
             <a href="./en/" lang="en">EN</a>
           </div>
-          <a class="button button-small" href="#kontakt">Produktdemo besprechen</a>
+          <a class="button button-small" href="#kontakt">Prüfaufgabe besprechen</a>
         </nav>
       </div>
     </header>
-
     <main id="main">
-      <section class="hero">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="container hero-layout">
-          <div class="hero-copy">
-            <p class="eyebrow">Vision Engineering &amp; Validation</p>
-            <h1>Bildverarbeitung auslegen.<br /><span>Robustheit nachweisen.</span><br />Freigaben begründen.</h1>
-            <p class="hero-lead">
-              RobuTrace ist ein in Entwicklung befindlicher Engineering-Prototyp für industrielle
-              Bildverarbeitung. Er führt von der Inspektionsaufgabe über Systemmodell und
-              Robustheitstests bis zu Messdaten, Evidenz und technischer Freigabe – mit klarer
-              Trennung zwischen Simulation und realem Nachweis.
-            </p>
-            <div class="hero-actions">
-              <a class="button" href="#kontakt">Produktdemo besprechen</a>
-              <a class="text-link" href="#produkt">
-                Prototyp ansehen
-                <span aria-hidden="true">→</span>
-              </a>
-            </div>
-            <div class="hero-audiences" role="group" aria-label="Schwerpunkte">
-              <span>Für</span>
-              <strong>Systemauslegung</strong>
-              <strong>Robustheitstests</strong>
-              <strong>Evidenz &amp; Freigabe</strong>
-            </div>
+      <section class="home-hero">
+        <div class="container home-hero-grid">
+          <div class="home-hero-copy">
+            <p class="home-status"><span aria-hidden="true"></span>Engineering-Prototyp · Entwicklungspartner gesucht</p>
+            <p class="eyebrow">Simulationsgestütztes Vision Engineering</p>
+            <h1>Bildverarbeitung<br /><span>virtuell entwickeln.</span></h1>
+            <p class="home-lead">Welche Kamera, welches Licht, welcher Algorithmus? Wir entwickeln RobuTrace, damit Sie Systemvarianten vor dem physischen Aufbau gemeinsam untersuchen können.</p>
+            <div class="hero-actions"><a class="button" href="#kontakt">Prüfaufgabe besprechen</a><a class="text-link" href="#produkt">So ist der Ansatz <span aria-hidden="true">→</span></a></div>
+            <p class="home-audience" id="zielgruppen">Für Maschinenbauer und Bildverarbeitungsintegratoren</p>
           </div>
-
-          <div class="hero-visual">
-            <div class="visual-glow" aria-hidden="true"></div>
-            <div class="product-window">
-              <div class="window-bar">
-                <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <span>RobuTrace Engineering-Prototyp</span>
-                <span class="window-status">Pilotphase</span>
-              </div>
-              <img
-                src="./assets/product-preview.png?v=20260805-current-ui"
-                alt="RobuTrace Prototyp mit Robustheitsmatrix, Störgrößen und Validierungskennzahlen"
-              />
-            </div>
-            <div class="floating-card floating-card-top">
-              <span class="mini-icon">01</span>
-              <div>
-                <strong>Systementwurf ableiten</strong>
-                <small>Use Case, Bildkette, offene Fragen</small>
-              </div>
-            </div>
-            <div class="floating-card floating-card-bottom">
-              <span class="mini-icon">05</span>
-              <div>
-                <strong>Freigabe begründen</strong>
-                <small>Messdaten, Gates, Baseline, Bericht</small>
-              </div>
-            </div>
+          <div class="home-concept">
+            <p class="home-concept-label">So soll RobuTrace unterstützen</p>
+            <h2>Eine Prüfaufgabe. Das Zusammenspiel verstehen.</h2>
+            <ol class="concept-flow">
+<li><span class="concept-number" aria-hidden="true">01</span><div><strong>Szenario</strong><p>Bauteil · Defekt · Aufnahmebedingungen</p></div></li>
+<li><span class="concept-number" aria-hidden="true">02</span><div><strong>Systemvarianten</strong><p>Kamera + Optik + Licht + Pipeline</p></div></li>
+<li><span class="concept-number" aria-hidden="true">03</span><div><strong>Entscheidungsgrundlage</strong><p>Variantenvergleich + reale Gegenprüfung</p></div></li>
+            </ol>
+            <p class="home-concept-note">Konzeptdarstellung · gekoppelte Szenario- und Bildsimulation in Entwicklung</p>
           </div>
         </div>
+        <div class="container home-intent"><p>Unser Ziel: weniger Versuchsaufbauten, fundiertere Auswahl und geringerer Entwicklungsaufwand. Den tatsächlichen Nutzen prüfen wir im Pilot.</p><a href="#stand">Was heute schon funktioniert <span aria-hidden="true">↗</span></a></div>
       </section>
-
-      <section class="section problem-section">
+      <section class="home-section" id="produkt">
         <div class="container">
-          <div class="section-intro split-intro">
-            <div>
-              <p class="eyebrow">Das Problem</p>
-              <h2>Im Labor stabil.<br />In der Linie plötzlich kritisch.</h2>
-            </div>
-            <p>
-              Gute Einzelergebnisse reichen nicht, wenn Kontext, Datenstände, Parameter,
-              Varianten und Änderungen nicht zusammengeführt werden. Ohne strukturierten
-              Engineering-Prozess bleibt unklar, warum ein Vision-System stabil ist oder wo es
-              kippt.
-            </p>
-          </div>
-
-          <div class="problem-grid">
-            <article class="problem-card reveal">
-              <span class="card-number">01</span>
-              <h3>Engineering-Kontext geht verloren</h3>
-              <p>
-                Anforderungen, Bilddaten, Varianten, Risiken und Entscheidungen liegen häufig in
-                getrennten Tools, Tabellen und Köpfen.
-              </p>
-            </article>
-            <article class="problem-card reveal">
-              <span class="card-number">02</span>
-              <h3>Tests bleiben schwer vergleichbar</h3>
-              <p>
-                Skripte, Parameterstände und Messergebnisse ändern sich laufend. Ohne Baseline
-                ist schwer erkennbar, welche Änderung wirklich geholfen hat.
-              </p>
-            </article>
-            <article class="problem-card reveal">
-              <span class="card-number">03</span>
-              <h3>Robustheit wird zu spät verstanden</h3>
-              <p>
-                Sensitivitäten gegenüber Licht, Lage, Unschärfe, Rauschen oder Produktvarianz
-                werden oft erst sichtbar, wenn der Prototyp bereits an der Linie steht.
-              </p>
-            </article>
-          </div>
+          <div class="home-intro"><p class="eyebrow">Vom Prüfproblem zur Systementscheidung</p><h2>Früher vergleichen.<br />Gezielter aufbauen.</h2><p>Die Eignung einer Bildverarbeitung entsteht im Zusammenspiel von Bauteil, Aufnahme und Auswertung. RobuTrace soll diese Zusammenhänge früher untersuchbar machen – bevor eine ungeeignete Kombination zu Einkauf, Umbau und neuen Versuchen führt.</p></div>
+          <div class="home-three" id="vorgehen"><article class="home-step"><span class="home-number">01</span><h3>Prüfaufgabe beschreiben</h3><p>Merkmal, Sichtfeld, Takt und Aufnahmebedingungen festlegen. Fehlende Angaben und Annahmen sichtbar machen.</p></article>
+<article class="home-step"><span class="home-number">02</span><h3>Systemvarianten untersuchen</h3><p>Kamera, Optik, Beleuchtung und Pipeline gemeinsam betrachten. Heute mit technischer Vorauswahl; künftig auf gekoppelten virtuellen Prüfszenarien.</p></article>
+<article class="home-step"><span class="home-number">03</span><h3>Auswahl real gegenprüfen</h3><p>Aussichtsreiche Varianten mit realen Aufnahmen prüfen. Ergebnisse und Grenzen dokumentieren und das Szenariomodell daran verbessern.</p></article></div>
         </div>
       </section>
-
-      <section class="section solution-section" id="produkt">
+      <section class="home-section home-example" id="beispiel">
         <div class="container">
-          <div class="section-intro centered-intro">
-            <p class="eyebrow">Der aktuelle Prototyp</p>
-            <h2>Fünf Schritte von der Aufgabe bis zur Freigabe</h2>
-            <p>
-              RobuTrace ergänzt bestehende HALCON-, OpenCV-, KI- und industrielle
-              Vision-Workflows, statt sie zu ersetzen. Der aktuelle Stand verbindet
-              Systemauslegung, Robustheitsprüfung, reale Messdaten und technische
-              Entscheidungslogik in einem geführten Arbeitsablauf.
-            </p>
-          </div>
-
-          <div class="steps steps-five" id="vorgehen">
-            <article class="step reveal">
-              <div class="step-icon" aria-hidden="true">01</div>
-              <span>Schritt 1</span>
-              <h3>Aufgabe klären</h3>
-              <p>
-                Anforderungen, Prüfaufgabe und Beispielbilder strukturiert erfassen. Offene
-                Angaben bleiben sichtbar, statt als sichere Fakten behandelt zu werden.
-              </p>
-            </article>
-            <article class="step reveal">
-              <div class="step-icon" aria-hidden="true">02</div>
-              <span>Schritt 2</span>
-              <h3>System modellieren</h3>
-              <p>
-                Bildkette, Pipeline, Fachregeln, Risiken und Nachweise in einem Engineering
-                Knowledge Graph nachvollziehbar verbinden.
-              </p>
-            </article>
-            <article class="step reveal">
-              <div class="step-icon" aria-hidden="true">03</div>
-              <span>Schritt 3</span>
-              <h3>Robustheit prüfen</h3>
-              <p>
-                Nominalzustand, Linienwechsel und Worst Cases unter kontrollierten Störgrößen
-                vergleichen. Simulation bleibt ausdrücklich eine Projektion.
-              </p>
-            </article>
-            <article class="step reveal">
-              <div class="step-icon" aria-hidden="true">04</div>
-              <span>Schritt 4</span>
-              <h3>Evidenz bewerten</h3>
-              <p>
-                Messdaten, Datenqualität, Testabdeckung und Ziel-KPIs bewerten. Nur zur aktuellen
-                Pipeline passende Evidenz zählt als Nachweis.
-              </p>
-            </article>
-            <article class="step reveal">
-              <div class="step-icon" aria-hidden="true">05</div>
-              <span>Schritt 5</span>
-              <h3>Freigabe entscheiden</h3>
-              <p>
-                Release Gates, Baseline, Risiken und Bericht zusammenführen. Offene oder veraltete
-                Nachweise blockieren die Freigabe sichtbar.
-              </p>
-            </article>
-          </div>
-
-          <div class="product-feature">
-            <div class="product-feature-media reveal">
-              <img
-                src="./assets/product-preview.png?v=20260805-current-ui"
-                alt="RobuTrace Prototyp mit Robustheitsmatrix, Messdaten-KPIs und Freigabestatus"
-                loading="lazy"
-              />
-            </div>
-            <div class="product-feature-copy">
-              <p class="eyebrow">Mehr als eine Konzeptskizze</p>
-              <h2>Der aktuelle Stand ist ein nutzbarer Engineering-Prototyp.</h2>
-              <ul class="check-list">
-                <li>
-                  <span aria-hidden="true">✓</span>
-                  KI-gestützte Analyse von Aufgabenbeschreibung und Beispielbildern
-                </li>
-                <li>
-                  <span aria-hidden="true">✓</span>
-                  Systementwurf, Pipeline-Kandidaten und Engineering Knowledge Graph
-                </li>
-                <li>
-                  <span aria-hidden="true">✓</span>
-                  Robustheitsmatrix für Licht, Unschärfe, Rotation, Rauschen und Verdeckung
-                </li>
-                <li>
-                  <span aria-hidden="true">✓</span>
-                  Messdaten-KPIs, Datenqualitätsprüfung und Anforderungsrückverfolgung
-                </li>
-                <li>
-                  <span aria-hidden="true">✓</span>
-                  Baseline-Vergleich, Release Gate sowie Projekt- und Report-Export
-                </li>
-              </ul>
-              <p class="product-note">
-                Klarer Status: Der Prototyp ist noch kein produktionsreifes SaaS-Produkt. Rollen,
-                revisionssichere Speicherung und Linien-, MES- oder QMS-Integrationen fehlen noch.
-                Systemvorschläge sind technische Vorauslegungen und müssen an realen Anlagendaten
-                validiert werden.
-              </p>
-            </div>
-          </div>
+          <div class="home-split"><div><p class="eyebrow">Ein Beispiel macht es greifbar</p><h2>Eine Lasche erkennen.<br />Aber unter welchen Bedingungen?</h2></div><p>Illustrative Prüfaufgabe, kein Kundenprojekt: An einem Bauteil soll eine fehlende Lasche erkannt werden. Welche Bildkette und Auswertung sind dafür geeignet?</p></div>
+          <div class="home-three"><article class="home-example-card"><span class="home-number">01</span><h3>Die Aufgabe</h3><p>Bauteillage, kleinste relevante Merkmalsbreite, Sichtfeld und verfügbarer Bauraum müssen zusammenpassen.</p></article>
+<article class="home-example-card"><span class="home-number">02</span><h3>Die Varianten</h3><p>Andere Kameraauflösung, Objektiv und Lichtanordnung verändern die Bildaufnahme. Die Software-Pipeline muss das Merkmal daraus zuverlässig auswerten können.</p></article>
+<article class="home-example-card"><span class="home-number">03</span><h3>Die Entscheidung</h3><p>Welche Kombination wird am realen Aufbau weiterverfolgt? Welche Annahmen und Grenzfälle sind zuerst zu prüfen?</p></article></div>
+          <p class="home-example-note">Zielbild: dieselbe Aufgabe mit mehreren Hardware- und Pipelinevarianten virtuell vergleichen. Die dafür nötige gekoppelte Bildsimulation ist noch nicht implementiert.</p>
+          <a class="text-link" href="./insights/kameraaufloesung-sichtfeld-mindestmerkmal.html">Wie Sichtfeld und Kameraauflösung zusammenhängen <span aria-hidden="true">→</span></a>
         </div>
       </section>
-
-      <section class="section outcome-section">
+      <section class="home-section" id="stand">
         <div class="container">
-          <div class="section-intro split-intro light-intro">
-            <div>
-              <p class="eyebrow">Der Nutzen</p>
-              <h2>Weniger Trial-and-Error.<br />Mehr belastbare Entscheidungen.</h2>
-            </div>
-            <p>
-              Nicht mehr Accuracy um ihrer selbst willen, sondern ein klarer Weg von der
-              Vision-Idee über Engineering-Iterationen bis zur belastbaren Entscheidung.
-            </p>
-          </div>
-          <div class="outcome-grid">
-            <article>
-              <strong>Früher</strong>
-              <span>Use Cases, Daten und Risiken strukturieren</span>
-            </article>
-            <article>
-              <strong>Schneller</strong>
-              <span>Varianten, Parameter und Versionen vergleichen</span>
-            </article>
-            <article>
-              <strong>Klarer</strong>
-              <span>zwischen Engineering, Qualität und Kunde entscheiden</span>
-            </article>
-            <article>
-              <strong>Nachvollziehbar</strong>
-              <span>Annahmen, Messdaten und Entscheidungen zusammenführen</span>
-            </article>
+          <div class="home-intro"><p class="eyebrow">Was heute möglich ist</p><h2>Ein Prototyp als Grundlage.<br />Ein klarer nächster Schritt.</h2><p>Wir unterscheiden zwischen vorhandenen Funktionen und dem Produktziel. So lässt sich ein Entwicklungspilot realistisch abgrenzen.</p></div>
+          <div class="home-status-grid">
+            <div class="home-capability"><span class="home-tag">Vorhanden</span><h3>Heute im Engineering-Prototyp</h3><ul><li>Prüfaufgaben und technische Eckdaten strukturiert erfassen</li><li>Kamera- und Hardwarekandidaten anhand von Herstellerdaten und technischen Grenzen vorauswählen</li><li>Pipeline-Entwürfe und regelbasierte Variantenbewertungen erstellen</li><li>Originalbilder verwalten und einfache Helligkeits-/Flächenprüfungen lokal ausführen</li><li>Schwellen-Parametersensitivität untersuchen, Messdaten auswerten und Projektberichte exportieren</li></ul></div>
+            <div class="home-capability home-future"><span class="home-tag">In Entwicklung</span><h3>Nächster Entwicklungsschritt</h3><ul><li>Prüfszenario und virtuelle Bildentstehung koppeln</li><li>Hardwarevarianten und ausführbare Pipelines am selben Szenario vergleichen</li><li>Modellvorhersagen anhand realer Aufnahmen überprüfen</li></ul><p>Eine validierte physikalische Bildsimulation, vollständige Variantenprüfung und industrielle Vorhersagegüte sind noch nicht vorhanden. Der lokale Bildpilot ist keine industrielle Freigabe. Validierung und Rückverfolgbarkeit bleiben ergänzende Funktionen.</p></div>
           </div>
         </div>
       </section>
-
-      <section class="section audience-section" id="zielgruppen">
+      <section class="home-section home-pilot" id="pilot">
         <div class="container">
-          <div class="section-intro centered-intro">
-            <p class="eyebrow">Für wen RobuTrace entsteht</p>
-            <h2>Für Teams, die Vision-Systeme entwickeln, verbessern und in die Linie bringen</h2>
-          </div>
-          <div class="audience-grid">
-            <article class="audience-card reveal">
-              <span class="audience-label">01</span>
-              <h3>Maschinen- &amp; Anlagenbau</h3>
-              <p>
-                Use Cases, Bilddaten und technische Risiken früher strukturieren, damit
-                Kundenprojekte schneller vom Prototyp zur belastbaren Lösung kommen.
-              </p>
-              <ul>
-                <li>Sondermaschinen</li>
-                <li>Prüf- und Montageanlagen</li>
-                <li>Variantenreiche Projekte</li>
-              </ul>
-            </article>
-            <article class="audience-card reveal">
-              <span class="audience-label">02</span>
-              <h3>Systemintegratoren</h3>
-              <p>
-                Wiederkehrende Engineering-Muster standardisieren und Projektwissen
-                über Daten, Tests, Parameter und Varianten hinweg nutzbar machen.
-              </p>
-              <ul>
-                <li>Vision Engineering</li>
-                <li>Automatisierung</li>
-                <li>Kundenabnahme</li>
-              </ul>
-            </article>
-            <article class="audience-card reveal">
-              <span class="audience-label">03</span>
-              <h3>Produktion &amp; Qualität</h3>
-              <p>
-                Änderungen bei Linienanlauf, Produktwechsel und Optimierung anhand klarer
-                Metriken und nachvollziehbarer Historie bewerten.
-              </p>
-              <ul>
-                <li>Quality Engineering</li>
-                <li>Industrial Engineering</li>
-                <li>Automation &amp; OT</li>
-              </ul>
-            </article>
-          </div>
+          <div class="home-intro"><p class="eyebrow">Mit einem konkreten Anwendungsfall starten</p><h2>Vom Erstgespräch zum<br />abgegrenzten Entwicklungspilot.</h2><p>Für Entwicklungsteams im Maschinenbau und in der Bildverarbeitungsintegration, die eine Prüfaufgabe frühzeitig auslegen möchten. Besonders geeignet ist ein klar abgrenzbarer 2D-Anwendungsfall mit Zugang zu Bauteil- und Aufnahmedaten.</p></div>
+          <div class="home-three"><article class="home-step"><span class="home-number">01</span><h3>Erstgespräch</h3><p>Wir klären Ihre Prüfaufgabe, den heutigen Entwicklungsprozess und ob ein gemeinsamer Pilot sinnvoll ist.</p></article>
+<article class="home-step"><span class="home-number">02</span><h3>Pilotumfang vereinbaren</h3><p>Prüffall, verfügbare Daten, Entwicklungsumfang, Erfolgskriterien und Vergütung werden vor Projektstart festgelegt.</p></article>
+<article class="home-step"><span class="home-number">03</span><h3>Entwickeln und gegenprüfen</h3><p>Im vereinbarten Umfang Modelle und Varianten untersuchen und an realen Aufnahmen gegenprüfen. Ergebnis: dokumentierte Erkenntnisse, Grenzen und nächste Schritte.</p></article></div>
+          <div class="home-pilot-action"><p>Einstieg über einen bezahlten Entwicklungspilot. Für wiederkehrende Projekte ist später eine jährliche Teamlizenz geplant. Preis und Umfang werden individuell vereinbart.</p><a class="button" href="#kontakt">Prüfaufgabe besprechen</a></div>
         </div>
       </section>
-
+      <section class="home-section home-faq">
+        <div class="container home-faq-grid"><h2>Vor dem ersten Gespräch</h2><div><details><summary>Kann ich RobuTrace bereits als fertige Simulationssoftware kaufen?</summary><p>Es gibt einen Engineering-Prototyp. Die gekoppelte Szenario- und Bildsimulation ist in Entwicklung. Aktuell suchen wir passende Entwicklungspartner für einen abgegrenzten Pilot.</p></details>
+<details><summary>Ersetzt RobuTrace HALCON oder OpenCV?</summary><p>RobuTrace soll die gemeinsame Systemauslegung unterstützen und bestehende Vision-Workflows ergänzen. Produktive Herstelleradapter und eine durchgängige Ausführung beliebiger Pipelines sind noch nicht vorhanden.</p></details>
+<details><summary>Was benötigen Sie für ein Erstgespräch?</summary><p>Eine kurze Beschreibung des Bauteils, Prüfmerkmals und heutigen Problems genügt. Freigegebene Beispielbilder und technische Eckdaten können später helfen. Vertrauliche Daten bitte erst nach persönlicher Abstimmung senden.</p></details>
+<details><summary>Bleiben meine Bilder lokal?</summary><p>Der aktuelle Prototyp verarbeitet den Originalbild-Pilot lokal. Eine optionale KI-Analyse überträgt ausdrücklich bestätigte Inhalte an einen externen Dienst. Datenzugang, Vertraulichkeit und Verarbeitung im Entwicklungspilot werden vorab vereinbart.</p></details></div></div>
+      </section>
       <section class="section founder-section" id="ueber-uns">
         <div class="container founder-layout">
           <div class="founder-photo reveal">
@@ -417,12 +213,8 @@
           </div>
           <div class="founder-copy">
             <p class="eyebrow">Über RobuTrace</p>
-            <h2>Engineering-Denken trifft industrielle Praxis.</h2>
-            <p class="founder-lead">
-              RobuTrace wird von Sara Hofmann entwickelt. Der Ausgangspunkt: industrielle
-              Bildverarbeitung soll nicht nur unter Idealbedingungen funktionieren, sondern
-              unter realen Produktionsbedingungen messbar robust sein.
-            </p>
+            <h2>Eine bessere Grundlage<br />für Vision-Entscheidungen.</h2>
+            <p class="founder-lead">Ich bin Sara Hofmann und entwickle RobuTrace. Mein Ziel ist, industrielle Bildverarbeitung früher als Gesamtsystem zu untersuchen – von Kamera und Beleuchtung bis zum Algorithmus.</p>
             <p>
               Erfahrungen in Softwareentwicklung, optischer Systemauslegung und Systems
               Engineering fließen in ein Werkzeug ein, das technische Tiefe mit klarer
@@ -435,7 +227,6 @@
           </div>
         </div>
       </section>
-
       <section class="section insights-preview">
         <div class="container">
           <div class="section-intro section-intro-row">
@@ -490,18 +281,13 @@
           </div>
         </div>
       </section>
-
       <section class="contact-section" id="kontakt">
         <div class="contact-grid" aria-hidden="true"></div>
         <div class="container contact-layout">
           <div class="contact-intro">
-            <p class="eyebrow">Pilotphase</p>
-            <h2>Sie haben einen realen Vision-Use-Case? Prüfen wir ihn gemeinsam.</h2>
-            <p>
-              Gesucht werden Maschinenbauer, Integratoren und Produktionsteams mit einem konkreten
-              Prüfproblem, realen Randbedingungen und belastbaren Beispielbildern. Ziel ist kein
-              Verkaufsgespräch, sondern ein fachlicher Pilot mit offenem Ergebnis.
-            </p>
+            <p class="eyebrow">Der nächste Schritt</p>
+            <h2>Welche Prüfaufgabe<br />beschäftigt Sie?</h2>
+            <p>Beschreiben Sie kurz Ihr Bauteil, das Prüfmerkmal und die aktuelle Herausforderung. Im Erstgespräch klären wir die Ausgangslage und einen möglichen nächsten Schritt. Eine Pilotbeauftragung erfolgt separat.</p>
             <p class="contact-direct">
               Sie möchten lieber direkt schreiben?
               <a href="mailto:info@robutrace.de">info@robutrace.de</a>
@@ -609,14 +395,11 @@
         </div>
       </section>
     </main>
-
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
           <img src="./assets/robutrace-logo-transparent.png?v=20260823" alt="RobuTrace" />
-          <p>
-            Engineering-Prototyp für robuste industrielle Bildverarbeitung.
-          </p>
+          <p>Simulationsgestützte Entwicklung industrieller Bildverarbeitung. Engineering-Prototyp in Entwicklung.</p>
         </div>
         <div>
           <strong>Navigation</strong>
